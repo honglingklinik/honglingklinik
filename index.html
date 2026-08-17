@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Øbro Rehabilitation Clinic | Rehabilitering & Akupunktur</title>
+
+  <meta name="description"
+        content="Øbro Rehabilitation Clinic i København tilbyder individuel rehabilitering, akupunktur og zoneterapi med fokus på kroppens funktion, balance og livskvalitet.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                   Arial, sans-serif;
+      color: #3f3b36;
+      background: #f7f5f0;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247,245,240,0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e4e0d8;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 22px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    /* Hero */
+
+    .hero {
+      max-width: 1180px;
+      min-height: 690px;
+      margin: auto;
+      padding: 110px 30px 90px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8b8378;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -1px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      max-width: 650px;
+      color: #625d55;
+      margin-bottom: 42px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 1px solid #777066;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #3f3b36;
+      color: #f7f5f0;
+    }
+
+    /* Intro */
+
+    .section {
+      padding: 110px 30px;
+    }
+
+    .section-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .intro {
+      border-top: 1px solid #ded9d0;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 90px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #928a80;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #625d55;
+      margin-bottom: 18px;
+    }
+
+    /* Services */
+
+    .services {
+      background: #eeebe4;
+    }
+
+    .services-header {
+      max-width: 1000px;
+      margin: auto auto 55px;
+    }
+
+    .service-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #d7d2c9;
+    }
+
+    .service {
+      padding: 35px 10px;
+      border-bottom: 1px solid #d7d2c9;
+    }
+
+    .service:nth-child(odd) {
+      padding-right: 50px;
+      border-right: 1px solid #d7d2c9;
+    }
+
+    .service:nth-child(even) {
+      padding-left: 50px;
+    }
+
+    .service h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #6c665e;
+      font-size: 15px;
+    }
+
+    /* Philosophy */
+
+    .philosophy {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .philosophy blockquote {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .philosophy p {
+      margin-top: 30px;
+      color: #777067;
+    }
+
+    /* About */
+
+    .about {
+      background: #f1eee8;
+    }
+
+    .about-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 90px;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      color: #625d55;
+      margin-bottom: 18px;
+    }
+
+    .credentials {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid #d8d3ca;
+      font-size: 14px;
+      color: #777067;
+    }
+
+    /* Contact */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact p {
+      font-size: 18px;
+      color: #625d55;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      margin: 35px 0;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid #ded9d0;
+      padding: 35px 30px;
+      text-align: center;
+      font-size: 13px;
+      color: #8a8379;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      .nav {
+        padding: 18px 20px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding: 80px 22px;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 75px 22px;
+      }
+
+      .intro,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service:nth-child(odd) {
+        padding-right: 0;
+        border-right: none;
+      }
+
+      .service:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .philosophy blockquote {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">ØBRO REHABILITATION CLINIC</div>
+
+    <div class="nav-links">
+      <a href="#om">Om mig</a>
+      <a href="#behandling">Behandling</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="small-title">
+        Rehabilitering · Akupunktur · Zoneterapi
+      </div>
+
+      <h1>
+        Kroppen har<br>
+        sin egen vej<br>
+        til balance.
+      </h1>
+
+      <p class="hero-text">
+        Individuel rehabilitering med fokus på kroppens funktion,
+        bevægelse og livskvalitet.
+      </p>
+
+      <a class="button" href="#kontakt">
+        Kontakt klinikken
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="section">
+    <div class="section-inner intro">
+
+      <div>
+        <div class="section-label">Øbro Rehabilitation Clinic</div>
+      </div>
+
+      <div>
+        <h2>
+          En rolig og individuel tilgang til rehabilitering.
+        </h2>
+
+        <p>
+          Hver krop har sin egen historie. Derfor tager behandlingen
+          udgangspunkt i dig, dine behov og din hverdag.
+        </p>
+
+        <p>
+          Målet er ikke kun at reducere smerter, men at forbedre
+          kroppens funktion og skabe større tryghed i bevægelsen.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="section services" id="behandling">
+
+    <div class="services-header">
+      <div class="section-label">Behandling & rehabilitering</div>
+
+      <h2>
+        Når kroppen har brug for hjælp
+        til at finde tilbage.
+      </h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <h3>Nakke- og rygsmerter</h3>
+        <p>
+          Individuel behandling og funktionel træning med fokus
+          på bevægelighed og hverdagsfunktion.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Idrætsskader</h3>
+        <p>
+          Rehabilitering efter belastninger og skader med fokus
+          på en sikker og gradvis tilbagevenden til aktivitet.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Postoperativ rehabilitering</h3>
+        <p>
+          Støtte til genopbygning af funktion, styrke og bevægelse
+          efter operation.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Kroniske smerter</h3>
+        <p>
+          En helhedsorienteret tilgang til længerevarende smerter
+          og nedsat funktion.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Funktionel genoptræning</h3>
+        <p>
+          Træning, der tager udgangspunkt i kroppens aktuelle
+          funktion og dine konkrete mål.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Akupunktur & zoneterapi</h3>
+        <p>
+          Komplementære behandlingsformer, som kan indgå
+          som en del af en individuel behandlingsplan.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+
+  <section class="section">
+
+    <div class="philosophy">
+
+      <div class="section-label">Min tilgang</div>
+
+      <blockquote>
+        “At rehabilitere er ikke kun at behandle
+        det, der gør ondt.
+        Det er at hjælpe kroppen med igen
+        at finde muligheder.”
+      </blockquote>
+
+      <p>
+        Ro · nærvær · funktion · bevægelse
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section about" id="om">
+
+    <div class="about-grid">
+
+      <div>
+        <div class="section-label">Om mig</div>
+      </div>
+
+      <div class="about-text">
+
+        <h2>
+          Erfaring fra både medicin,
+          rehabilitering og komplementær behandling.
+        </h2>
+
+        <p>
+          Jeg arbejder med rehabilitering ud fra en kombination
+          af sundhedsvidenskabelig viden, klinisk erfaring og
+          en individuel forståelse af den enkelte krop.
+        </p>
+
+        <p>
+          Min tilgang er rolig og grundig. Jeg lægger vægt på,
+          at du forstår din egen krop og bliver aktiv i din
+          rehabilitering.
+        </p>
+
+        <div class="credentials">
+          MSc i Rehabiliteringsvidenskab<br>
+          RAB Akupunktør<br>
+          RAB Zoneterapeut
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact" id="kontakt">
+
+    <div class="contact-inner">
+
+      <div class="section-label">Kontakt</div>
+
+      <h2>
+        Du er velkommen til at kontakte mig.
+      </h2>
+
+      <p>
+        Har du spørgsmål om behandling eller rehabilitering,
+        er du velkommen til at tage kontakt.
+      </p>
+
+      <div class="contact-info">
+
+        Østerbrogade 62, 3. tv.<br>
+        2100 København Ø<br><br>
+
+        <strong>Telefon:</strong>
+        <a href="tel:+4526288888">+45 26 28 88 88</a><br>
+
+        <strong>E-mail:</strong>
+        <a href="mailto:mhl7681@gmail.com">
+          mhl7681@gmail.com
+        </a>
+
+      </div>
+
+      <a class="button" href="mailto:mhl7681@gmail.com">
+        Skriv til mig
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 Øbro Rehabilitation Clinic · København
+</footer>
+
+</body>
+</html>
