@@ -596,6 +596,99 @@
       }
     }
 
+
+    /* ===== FINAL COMPACT SECTION ALIGNMENT ===== */
+
+    /* Navigation stays visible; content sections do not repeat nav labels. */
+    #about-label,
+    #services-label,
+    #contact-label {
+      display: none !important;
+    }
+
+    /* Reduce excessive blank space at the start of each section. */
+    #om {
+      padding-top: 34px !important;
+    }
+
+    #behandling {
+      padding-top: 34px !important;
+    }
+
+    #kontakt {
+      padding-top: 34px !important;
+    }
+
+    /* About: content begins close to the section boundary. */
+    .about-heading {
+      display: none !important;
+    }
+
+    .about-grid {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      align-items: start !important;
+    }
+
+    .about-photo {
+      margin-top: 0 !important;
+    }
+
+    .about-photo img {
+      max-width: 370px !important;
+    }
+
+    .about-text {
+      padding-top: 0 !important;
+    }
+
+    .about-text h3 {
+      margin-top: 12px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .about-text p {
+      margin-top: 0 !important;
+      margin-bottom: 8px !important;
+    }
+
+    #about-credentials {
+      margin-bottom: 12px !important;
+      padding-bottom: 12px !important;
+    }
+
+    /* Treatment: keep the useful new title, remove duplicate "Behandling". */
+    .services-header {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 34px !important;
+    }
+
+    #services-title {
+      margin-top: 0 !important;
+    }
+
+    /* Contact: remove duplicate "Kontakt"; useful content starts immediately. */
+    .contact-grid {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .contact h2,
+    .contact h3 {
+      margin-top: 0 !important;
+    }
+
+    @media (max-width: 900px) {
+      #om, #behandling, #kontakt {
+        padding-top: 24px !important;
+      }
+
+      .about-photo img {
+        max-width: 340px !important;
+      }
+    }
+
 </style>
 </head>
 
@@ -1165,40 +1258,57 @@ setLanguage(savedLanguage);
 
 </script>
 
+
 <script>
 (function () {
-  function scrollToSection(id) {
-    const target = document.querySelector(id);
+  const TARGETS = {
+    "#om": "#om",
+    "#behandling": "#behandling",
+    "#kontakt": "#kontakt"
+  };
+
+  function goToSection(hash, smooth) {
+    const selector = TARGETS[hash];
+    const target = selector ? document.querySelector(selector) : null;
     const header = document.querySelector("header");
     if (!target || !header) return;
 
     const headerHeight = header.getBoundingClientRect().height;
-    const extraGap = 24;
-    const top = target.getBoundingClientRect().top + window.pageYOffset
-                - headerHeight - extraGap;
+    /* Small breathing room only — no large blank band. */
+    const gap = 10;
+    const y = target.getBoundingClientRect().top + window.pageYOffset
+              - headerHeight - gap;
 
     window.scrollTo({
-      top: Math.max(0, top),
-      behavior: "smooth"
+      top: Math.max(0, y),
+      behavior: smooth ? "smooth" : "auto"
     });
   }
 
   document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
-      const id = this.getAttribute("href");
-      if (!id || id === "#") return;
+      const hash = this.getAttribute("href");
+      if (!TARGETS[hash]) return;
       event.preventDefault();
-      scrollToSection(id);
-      history.replaceState(null, "", id);
+      history.replaceState(null, "", hash);
+      goToSection(hash, true);
     });
   });
 
-  // Also correct direct links / refreshes containing #om, #behandling or #kontakt.
   window.addEventListener("load", function () {
-    if (["#om", "#behandling", "#kontakt"].includes(window.location.hash)) {
+    if (TARGETS[window.location.hash]) {
       setTimeout(function () {
-        scrollToSection(window.location.hash);
-      }, 80);
+        goToSection(window.location.hash, false);
+      }, 100);
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (TARGETS[window.location.hash]) {
+      clearTimeout(window.__obroResizeTimer);
+      window.__obroResizeTimer = setTimeout(function () {
+        goToSection(window.location.hash, false);
+      }, 120);
     }
   });
 })();
