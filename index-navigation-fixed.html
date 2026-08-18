@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ØBRO REHABILITERINGS KLINIK | Rehabilitering & Akupunktur</title>
+
+  <meta name="description"
+        content="ØBRO REHABILITERINGS KLINIK i København tilbyder individuel rehabilitering, akupunktur og zoneterapi.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                   Arial, sans-serif;
+      color: #31483B;
+      background: #F3F7F1;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247,245,240,0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e4e0d8;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 19px;
+      letter-spacing: 1.3px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .languages {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .language-button {
+      border: none;
+      background: transparent;
+      color: #52665A;
+      cursor: pointer;
+      font: inherit;
+      padding: 4px 2px;
+      transition: 0.2s;
+    }
+
+    .language-button:hover,
+    .language-button.active {
+      color: #31483B;
+      font-weight: 600;
+    }
+
+    .hero {
+      max-width: 1180px;
+      min-height: 690px;
+      margin: auto;
+      padding: 110px 30px 90px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #718578;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -1px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      max-width: 650px;
+      color: #52665A;
+      margin-bottom: 42px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 1px solid #667D6D;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #31483B;
+      color: #F3F7F1;
+    }
+
+    .section {
+      padding: 110px 30px;
+    }
+
+    .section-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .intro {
+      border-top: 1px solid #D4DFD4;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 90px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #73877A;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #52665A;
+      margin-bottom: 18px;
+    }
+
+    .services {
+      background: #E5EEE4;
+    }
+
+    .services-header {
+      max-width: 1000px;
+      margin: auto auto 55px;
+    }
+
+    .service-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #C9D8CA;
+    }
+
+    .service {
+      padding: 35px 10px;
+      border-bottom: 1px solid #C9D8CA;
+    }
+
+    .service:nth-child(odd) {
+      padding-right: 50px;
+      border-right: 1px solid #C9D8CA;
+    }
+
+    .service:nth-child(even) {
+      padding-left: 50px;
+    }
+
+    .service h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #5D7164;
+      font-size: 15px;
+    }
+
+    .philosophy {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .philosophy blockquote {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .philosophy p {
+      margin-top: 30px;
+      color: #65786C;
+    }
+
+    .about {
+      background: #EAF1E8;
+    }
+
+    .about-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 90px;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      color: #52665A;
+      margin-bottom: 18px;
+    }
+
+    .credentials {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid #CBD8CB;
+      font-size: 14px;
+      color: #65786C;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact p {
+      font-size: 18px;
+      color: #52665A;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      margin: 35px 0;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    footer {
+      border-top: 1px solid #D4DFD4;
+      padding: 35px 30px;
+      text-align: center;
+      font-size: 13px;
+      color: #708176;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 15px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        padding: 16px 20px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo {
+        font-size: 16px;
+        white-space: normal;
+      }
+
+      .nav-right {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .languages {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding: 80px 22px;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 75px 22px;
+      }
+
+      .intro,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service:nth-child(odd) {
+        padding-right: 0;
+        border-right: none;
+      }
+
+      .service:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .philosophy blockquote {
+        font-size: 29px;
+      }
+    }
+  
+    header{background:#0F4D2F!important;border-bottom:none!important;backdrop-filter:none!important;}
+    .nav{max-width:1280px!important;min-height:165px!important;margin:auto;padding:18px 36px 16px!important;
+      display:grid!important;grid-template-columns:170px 1fr 370px!important;grid-template-rows:92px 45px!important;
+      align-items:center!important;gap:0 28px!important;}
+    .logo{grid-column:1;grid-row:1;display:flex!important;align-items:center!important;}
+    .brand-logo{width:145px;height:145px;object-fit:contain;border-radius:50%;}
+    .clinic-name{grid-column:2/4;grid-row:1;color:#fff;font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(34px,3.6vw,52px);font-weight:400;line-height:1.02;letter-spacing:-.3px;white-space:nowrap;text-align:left;}
+    .nav-right{grid-column:1/4;grid-row:2;width:100%;display:grid!important;grid-template-columns:1fr auto;align-items:center!important;color:#fff;}
+    .nav-links{justify-self:start;display:flex!important;gap:42px!important;font-size:16px!important;}
+    .nav-links a{color:#fff!important;}
+    .languages{justify-self:end;display:flex!important;gap:22px!important;font-size:16px!important;}
+    .language-button{color:rgba(255,255,255,.88)!important;}
+    .language-button:hover,.language-button.active{color:#fff!important;font-weight:600;}
+    .about-photo{margin-top:28px;}
+    .about-photo img{width:100%;max-width:300px;display:block;border-radius:5px;box-shadow:0 12px 30px rgba(49,72,59,.13);}
+    .about-text h3{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;line-height:1.3;margin:28px 0 14px;color:#31483B;}
+    #about-credentials{color:#65786C;font-size:14px;padding-bottom:20px;border-bottom:1px solid #CBD8CB;margin-bottom:24px;}
+    @media(max-width:900px){
+      .nav{min-height:auto!important;padding:12px 18px!important;grid-template-columns:92px 1fr!important;grid-template-rows:auto auto!important;gap:8px 14px!important;}
+      .brand-logo{width:82px;height:82px;}
+      .clinic-name{grid-column:2;grid-row:1;font-size:clamp(22px,5vw,32px);white-space:normal;}
+      .nav-right{grid-column:1/-1;grid-row:2;display:flex!important;flex-direction:row!important;justify-content:space-between;align-items:center!important;flex-wrap:wrap;gap:10px!important;}
+      .nav-links{gap:16px!important;font-size:13px!important;}
+      .languages{gap:10px!important;font-size:12px!important;}
+    }
+
+
+    /* ===== FINAL V2 LAYOUT ADJUSTMENTS ===== */
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 215px;
+    }
+
+    header {
+      background: #0F4D2F !important;
+    }
+
+    .nav {
+      max-width: 1280px !important;
+      min-height: 205px !important;
+      padding: 20px 38px 18px !important;
+      grid-template-columns: 155px 1fr 365px !important;
+      grid-template-rows: 120px 48px !important;
+      gap: 0 26px !important;
+    }
+
+    .brand-logo {
+      width: 128px !important;
+      height: 128px !important;
+      object-fit: contain !important;
+      border-radius: 50%;
+      align-self: start;
+      margin-top: 2px;
+    }
+
+    .clinic-name {
+      font-size: clamp(36px, 3.6vw, 50px) !important;
+      line-height: 1.05 !important;
+      align-self: center;
+    }
+
+    .nav-links {
+      gap: 42px !important;
+      font-size: 16px !important;
+      align-self: center;
+    }
+
+    .languages {
+      gap: 22px !important;
+      font-size: 16px !important;
+      align-self: center;
+    }
+
+    /* Prevent sticky header from covering anchored section headings */
+    #behandling,
+    #om,
+    #kontakt {
+      scroll-margin-top: 215px;
+    }
+
+    /* Home */
+    .hero {
+      min-height: 560px !important;
+      padding: 90px 30px 85px !important;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px !important;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #hero-title {
+      font-size: clamp(42px, 5.2vw, 66px) !important;
+      line-height: 1.12 !important;
+      max-width: 900px;
+      margin: 0 auto 28px !important;
+    }
+
+    .hero-text {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 720px !important;
+    }
+
+    /* Treatment */
+    .services-header {
+      text-align: center;
+      max-width: 1050px !important;
+      margin: auto auto 55px !important;
+    }
+
+    #services-label {
+      display: none;
+    }
+
+    #services-title {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: clamp(32px, 4vw, 46px) !important;
+    }
+
+    /* About */
+    .about {
+      padding-top: 95px !important;
+    }
+
+    .about-heading {
+      max-width: 1000px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .about-heading h2 {
+      margin-bottom: 0;
+      font-size: clamp(34px, 4vw, 46px);
+    }
+
+    .about-grid {
+      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.5fr) !important;
+      gap: 70px !important;
+      align-items: start;
+    }
+
+    .about-photo {
+      margin-top: 0 !important;
+    }
+
+    .about-photo img {
+      max-width: 360px !important;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Contact */
+    .contact {
+      scroll-margin-top: 215px;
+    }
+
+    @media (max-width: 900px) {
+      html {
+        scroll-padding-top: 150px;
+      }
+
+      #behandling,
+      #om,
+      #kontakt {
+        scroll-margin-top: 150px;
+      }
+
+      .nav {
+        min-height: auto !important;
+        grid-template-columns: 88px 1fr !important;
+        grid-template-rows: auto auto !important;
+        padding: 12px 16px !important;
+      }
+
+      .brand-logo {
+        width: 78px !important;
+        height: 78px !important;
+      }
+
+      .clinic-name {
+        font-size: clamp(22px, 5vw, 31px) !important;
+      }
+
+      .hero {
+        min-height: 470px !important;
+        padding: 70px 22px !important;
+      }
+
+      #hero-title {
+        font-size: clamp(38px, 9vw, 52px) !important;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+      }
+
+      .about-photo img {
+        max-width: 330px !important;
+      }
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo"><img class="brand-logo" src="obro-logo-final.jpg" alt="Øbro Rehabiliterings Klinik logo"></div>
+    <div class="clinic-name">Øbro Rehabiliterings Klinik</div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#om" id="nav-about">Om mig</a>
+        <a href="#behandling" id="nav-treatment">Behandling</a>
+        <a href="#kontakt" id="nav-contact">Kontakt</a>
+      </div>
+      <div class="languages">
+        <button class="language-button active" data-lang="da">🇩🇰 Dansk</button>
+        <button class="language-button" data-lang="en">🇬🇧 English</button>
+        <button class="language-button" data-lang="zh">🇨🇳 中文</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-content">
+<h1 id="hero-title">Vejen tilbage til bedre funktion og livskvalitet.</h1>
+
+      <p class="hero-text" id="hero-text">
+        Individuel rehabilitering med fokus på kroppens funktion,
+        bevægelse og livskvalitet.
+      </p>
+
+      <a class="button" href="#kontakt" id="hero-button">
+        Kontakt klinikken
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="section">
+    <div class="section-inner intro">
+
+      <div>
+        <div class="section-label" id="intro-label">
+          ØBRO REHABILITERINGS KLINIK
+        </div>
+      </div>
+
+      <div>
+        <h2 id="intro-title">
+          En rolig og individuel tilgang til rehabilitering.
+        </h2>
+
+        <p id="intro-p1">
+          Hver krop har sin egen historie. Derfor tager behandlingen
+          udgangspunkt i dig, dine behov og din hverdag.
+        </p>
+
+        <p id="intro-p2">
+          Målet er ikke kun at reducere smerter, men at forbedre
+          kroppens funktion og skabe større tryghed i bevægelsen.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="section services" id="behandling">
+
+    <div class="services-header">
+      <div class="section-label" id="services-label">
+        Behandling & rehabilitering
+      </div>
+
+      <h2 id="services-title">Hvad kan du få hjælp til hos Øbro Rehabiliterings Klinik?</h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <h3 id="service1-title">Nakke- og rygsmerter</h3>
+        <p id="service1-text">
+          Individuel behandling og funktionel træning med fokus
+          på bevægelighed og hverdagsfunktion.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3 id="service2-title">Idrætsskader</h3>
+        <p id="service2-text">
+          Rehabilitering efter belastninger og skader med fokus
+          på en sikker og gradvis tilbagevenden til aktivitet.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3 id="service3-title">Postoperativ rehabilitering</h3>
+        <p id="service3-text">
+          Støtte til genopbygning af funktion, styrke og bevægelse
+          efter operation.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3 id="service4-title">Kroniske smerter</h3>
+        <p id="service4-text">
+          En helhedsorienteret tilgang til længerevarende smerter
+          og nedsat funktion.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3 id="service5-title">Funktionel genoptræning</h3>
+        <p id="service5-text">
+          Træning, der tager udgangspunkt i kroppens aktuelle
+          funktion og dine konkrete mål.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3 id="service6-title">Akupunktur & zoneterapi</h3>
+        <p id="service6-text">
+          Komplementære behandlingsformer, som kan indgå
+          som en del af en individuel behandlingsplan.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+
+  <section class="section">
+
+    <div class="philosophy">
+
+      <div class="section-label" id="philosophy-label">
+        Min tilgang
+      </div>
+
+      <blockquote id="philosophy-quote">
+        “At rehabilitere er ikke kun at behandle
+        det, der gør ondt.
+        Det er at hjælpe kroppen med igen
+        at finde muligheder.”
+      </blockquote>
+
+      <p id="philosophy-text">
+        Ro · nærvær · funktion · bevægelse
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+<section class="section about" id="om">
+
+  <div class="about-heading">
+    <h2 id="about-label">Om mig</h2>
+  </div>
+
+  <div class="about-grid">
+
+    <div>
+      <div class="about-photo">
+        <img src="hongling-photo-updated.jpg" alt="Hongling Mo Sønnichsen">
+      </div>
+    </div>
+
+    <div class="about-text">
+
+      <h2 id="about-name">
+        Hongling Mo Sønnichsen
+      </h2>
+
+      <p id="about-credentials">
+        MSc i Rehabiliteringsvidenskab · RAB Akupunktør · RAB Zoneterapeut
+      </p>
+
+      <h3 id="about-title">
+        Min faglige baggrund
+      </h3>
+
+      <p id="about-p1">
+        Jeg arbejder i dag med klinisk rehabilitering på et tværfagligt sundhedscenter i København.
+        Jeg har en kandidatuddannelse i rehabilitering fra Syddansk Universitet og en medicinsk
+        uddannelsesbaggrund fra Guangxi Medical University i Kina.
+      </p>
+
+      <p id="about-p2">
+        Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi
+        og immunologi. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt
+        om screening og analyse af udvalgte kinesiske lægeurters indholdsstoffer og deres betydning
+        for immunfunktionen. Det blev begyndelsen på min forsknings- og faglige tilknytning til Danmark.
+      </p>
+
+      <p id="about-p3">
+        Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering.
+        Min kombinerede erfaring inden for grundforskning, immunologi og klinisk rehabilitering
+        giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer
+        til genopbygning af funktion og hverdagsliv.
+      </p>
+<p id="rehab-text">
+        En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv.
+        Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske
+        og psykiske udfordringer, som mange mennesker møder under rehabilitering.
+        Erfaringen blev en vigtig inspiration for min videre uddannelse og mit arbejde
+        inden for rehabilitering.
+      </p>
+
+      <p id="about-p4">
+        I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed
+        og respekt. Jeg kombinerer evidensbaseret rehabilitering med akupunktur, zoneterapi
+        og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed
+        og livskvalitet.
+      </p>
+
+      <p id="about-p5">Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact" id="kontakt">
+
+    <div class="contact-inner">
+
+      <div class="section-label" id="contact-label">
+        Kontakt
+      </div>
+
+      <h2 id="contact-title">
+        Du er velkommen til at kontakte mig.
+      </h2>
+
+      <p id="contact-text">
+        Har du spørgsmål om behandling eller rehabilitering,
+        er du velkommen til at tage kontakt.
+      </p>
+
+      <div class="contact-info">
+
+        Østerbrogade 62, 3. tv.<br>
+        2100 København Ø<br><br>
+
+        <strong id="phone-label">Telefon:</strong>
+        <a href="tel:+4526288888">+45 26 28 88 88</a><br>
+
+        <strong id="email-label">E-mail:</strong>
+        <a href="mailto:mhl7681@gmail.com">
+          mhl7681@gmail.com
+        </a>
+
+      </div>
+
+      <a class="button" href="mailto:mhl7681@gmail.com" id="contact-button">
+        Skriv til mig
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer id="footer">
+  © 2026 ØBRO REHABILITERINGS KLINIK · København
+</footer>
+
+  
+<script>
+
+const translations = {
+
+  da: {
+    logo: "ØBRO REHABILITERINGS KLINIK",
+
+    navAbout: "Om mig",
+    navTreatment: "Behandling",
+    navContact: "Kontakt",
+
+    heroSmall: "Rehabilitering · Akupunktur · Zoneterapi",
+    heroTitle: "Vejen tilbage til bedre funktion og livskvalitet.",
+    heroText: "Individuel rehabilitering med fokus på kroppens funktion, bevægelse og livskvalitet.",
+    heroButton: "Kontakt klinikken",
+
+    introLabel: "ØBRO REHABILITERINGS KLINIK",
+    introTitle: "En rolig og individuel tilgang til rehabilitering.",
+    introP1: "Hver krop har sin egen historie. Derfor tager behandlingen udgangspunkt i dig, dine behov og din hverdag.",
+    introP2: "Målet er ikke kun at reducere smerter, men at forbedre kroppens funktion og skabe større tryghed i bevægelsen.",
+
+    servicesLabel: "Behandling & rehabilitering",
+    servicesTitle: "Hvad kan du få hjælp til hos Øbro Rehabiliterings Klinik?",
+
+    service1Title: "Nakke- og rygsmerter",
+    service1Text: "Individuel behandling og funktionel træning med fokus på bevægelighed og hverdagsfunktion.",
+
+    service2Title: "Idrætsskader",
+    service2Text: "Rehabilitering efter belastninger og skader med fokus på en sikker og gradvis tilbagevenden til aktivitet.",
+
+    service3Title: "Postoperativ rehabilitering",
+    service3Text: "Støtte til genopbygning af funktion, styrke og bevægelse efter operation.",
+
+    service4Title: "Kroniske smerter",
+    service4Text: "En helhedsorienteret tilgang til længerevarende smerter og nedsat funktion.",
+
+    service5Title: "Funktionel genoptræning",
+    service5Text: "Træning, der tager udgangspunkt i kroppens aktuelle funktion og dine konkrete mål.",
+
+    service6Title: "Akupunktur & zoneterapi",
+    service6Text: "Komplementære behandlingsformer, som kan indgå som en del af en individuel behandlingsplan.",
+
+    philosophyLabel: "Min tilgang",
+    philosophyQuote: "“At rehabilitere er ikke kun at behandle det, der gør ondt.<br>Det er at hjælpe kroppen med igen at finde muligheder.”",
+    philosophyText: "Ro · nærvær · funktion · bevægelse",
+
+    aboutLabel: "Om mig",
+    aboutName: "Hongling Mo Sønnichsen",
+    aboutCredentials: "MSc i Rehabiliteringsvidenskab · RAB Akupunktør · RAB Zoneterapeut",
+    aboutTitle: "Min faglige baggrund",
+    aboutP1: "Jeg arbejder i dag med klinisk rehabilitering på et tværfagligt sundhedscenter i København. Jeg har en kandidatuddannelse i rehabilitering fra Syddansk Universitet og en medicinsk uddannelsesbaggrund fra Guangxi Medical University i Kina.",
+    aboutP2: "Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi og immunologi. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt om screening og analyse af udvalgte kinesiske lægeurters indholdsstoffer og deres betydning for immunfunktionen. Det blev begyndelsen på min forsknings- og faglige tilknytning til Danmark.",
+    aboutP3: "Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering. Min kombinerede erfaring inden for grundforskning, immunologi og klinisk rehabilitering giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer til genopbygning af funktion og hverdagsliv.",
+    aboutP4: "I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed og respekt. Jeg kombinerer evidensbaseret rehabilitering med akupunktur, zoneterapi og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed og livskvalitet.",
+    aboutP5: "Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.",
+    rehabText: "En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv. Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske og psykiske udfordringer, som mange mennesker møder under rehabilitering. Erfaringen blev en vigtig inspiration for min videre uddannelse og mit arbejde inden for rehabilitering.",
+
+    contactLabel: "Kontakt",
+    contactTitle: "Du er velkommen til at kontakte mig.",
+    contactText: "Har du spørgsmål om behandling eller rehabilitering, er du velkommen til at tage kontakt.",
+    phoneLabel: "Telefon:",
+    emailLabel: "E-mail:",
+    contactButton: "Skriv til mig",
+
+    footer: "© 2026 ØBRO REHABILITERINGS KLINIK · København",
+    pageTitle: "ØBRO REHABILITERINGS KLINIK | Rehabilitering & Akupunktur"
+  },
+
+
+  en: {
+    logo: "ØBRO REHABILITATION CLINIC",
+
+    navAbout: "About",
+    navTreatment: "Treatment",
+    navContact: "Contact",
+
+    heroSmall: "Rehabilitation · Acupuncture · Reflexology",
+    heroTitle: "The path back to better function and quality of life.",
+    heroText: "Individual rehabilitation focused on body function, movement and quality of life.",
+    heroButton: "Contact the clinic",
+
+    introLabel: "ØBRO REHABILITATION CLINIC",
+    introTitle: "A calm and individual approach to rehabilitation.",
+    introP1: "Every body has its own story. That is why treatment begins with you, your needs and your everyday life.",
+    introP2: "The goal is not only to reduce pain, but also to improve physical function and create greater confidence in movement.",
+
+    servicesLabel: "Treatment & rehabilitation",
+    servicesTitle: "How can Øbro Rehabiliterings Klinik help you?",
+
+    service1Title: "Neck and back pain",
+    service1Text: "Individual treatment and functional training focused on mobility and everyday function.",
+
+    service2Title: "Sports injuries",
+    service2Text: "Rehabilitation following strain and injury, with a focus on a safe and gradual return to activity.",
+
+    service3Title: "Postoperative rehabilitation",
+    service3Text: "Support for rebuilding function, strength and movement after surgery.",
+
+    service4Title: "Chronic pain",
+    service4Text: "A holistic approach to persistent pain and reduced physical function.",
+
+    service5Title: "Functional rehabilitation",
+    service5Text: "Training based on your current physical function and your individual goals.",
+
+    service6Title: "Acupuncture & reflexology",
+    service6Text: "Complementary treatments that may form part of an individual treatment plan.",
+
+    philosophyLabel: "My approach",
+    philosophyQuote: "“Rehabilitation is not only about treating what hurts.<br>It is about helping the body rediscover its possibilities.”",
+    philosophyText: "Calm · presence · function · movement",
+
+    aboutLabel: "About me",
+    aboutName: "Hongling Mo Sønnichsen",
+    aboutCredentials: "MSc in Rehabilitation Science · RAB Acupuncturist · RAB Reflexologist",
+    aboutTitle: "My professional background",
+    aboutP1: "I currently work with clinical rehabilitation at a multidisciplinary healthcare centre in Copenhagen. I hold a Master’s degree in Rehabilitation from the University of Southern Denmark and have a medical educational background from Guangxi Medical University in China.",
+    aboutP2: "Early in my career, I worked in teaching and research within pathophysiology and immunology. In 2000, I took part as an exchange researcher in a Danish-Chinese research project screening and analysing selected compounds from Chinese medicinal herbs and their effects on immune function. This marked the beginning of my research and professional connection with Denmark.",
+    aboutP3: "I am committed to integrating traditional treatment approaches with modern rehabilitation. My combined background in basic research, immunology and clinical rehabilitation gives me a multidisciplinary perspective—from understanding biological mechanisms to rebuilding function and everyday life.",
+    aboutP4: "In my clinical work, I aim to meet each person with calm, professionalism and respect. When relevant, I combine evidence-based rehabilitation with acupuncture, reflexology and patient education, focusing on function, independence and quality of life.",
+    aboutP5: "I look forward to contributing my professional experience, international background and commitment to the organisation’s community and activities.",
+    rehabText: "A serious traffic accident in 2012 became an important turning point in my life. My own rehabilitation process gave me a deeper understanding of the physical and psychological challenges that many people face during rehabilitation. This experience became an important inspiration for my further education and my work in rehabilitation.",
+
+    contactLabel: "Contact",
+    contactTitle: "You are welcome to contact me.",
+    contactText: "If you have questions about treatment or rehabilitation, you are welcome to get in touch.",
+    phoneLabel: "Phone:",
+    emailLabel: "Email:",
+    contactButton: "Write to me",
+
+    footer: "© 2026 ØBRO REHABILITATION CLINIC · Copenhagen",
+    pageTitle: "ØBRO REHABILITATION CLINIC | Rehabilitation & Acupuncture"
+  },
+
+
+  zh: {
+    logo: "ØBRO 康复中心",
+
+    navAbout: "关于我",
+    navTreatment: "治疗与康复",
+    navContact: "联系",
+
+    heroSmall: "康复 · 针灸 · 反射疗法",
+    heroTitle: "重获更好身体功能与生活质量之路。",
+    heroText: "以身体功能、运动与生活质量为核心的个性化康复。",
+    heroButton: "联系康复中心",
+
+    introLabel: "ØBRO 康复中心",
+    introTitle: "安静而个性化的康复方式。",
+    introP1: "每一个身体都有自己的故事。因此，治疗从您本人、您的需求以及您的日常生活出发。",
+    introP2: "我们的目标不仅是减轻疼痛，更是改善身体功能，让您在运动和日常生活中更加安心。",
+
+    servicesLabel: "治疗与康复",
+    servicesTitle: "Øbro 康复诊所可以为您提供哪些帮助？",
+
+    service1Title: "颈部与背部疼痛",
+    service1Text: "根据个人情况进行治疗和功能训练，重点改善活动能力和日常功能。",
+
+    service2Title: "运动损伤",
+    service2Text: "针对运动负荷和损伤进行康复，帮助您安全、循序渐进地恢复活动。",
+
+    service3Title: "术后康复",
+    service3Text: "帮助身体在手术后逐步恢复功能、力量和活动能力。",
+
+    service4Title: "慢性疼痛",
+    service4Text: "从整体角度处理长期疼痛以及身体功能下降的问题。",
+
+    service5Title: "功能性康复训练",
+    service5Text: "根据身体目前的功能状态以及您的具体目标制定训练方案。",
+
+    service6Title: "针灸与反射疗法",
+    service6Text: "作为个性化治疗方案的一部分，可结合使用的辅助治疗方式。",
+
+    philosophyLabel: "我的理念",
+    philosophyQuote: "“康复不仅是治疗疼痛。<br>更是帮助身体重新发现可能性的过程。”",
+    philosophyText: "宁静 · 专注 · 功能 · 运动",
+
+    aboutLabel: "关于我",
+    aboutName: "Hongling Mo Sønnichsen",
+    aboutCredentials: "康复科学硕士 MSc · RAB 注册针灸师 · RAB 注册反射疗法治疗师",
+    aboutTitle: "我的专业背景",
+    aboutP1: "现任职于丹麦哥本哈根一家联合医疗中心，从事临床康复工作。兼具南丹麦大学康复医学硕士与广西医科大学医学教育背景。",
+    aboutP2: "早年从事病理生理学与免疫学教学和科研工作。2000年作为交换学者参与中丹合作项目“筛选和分析部分中草药成分对免疫功能的作用”，由此开启在丹麦的科研与专业发展经历。",
+    aboutP3: "多年来，我持续关注传统医学与现代康复理念及技术的结合。基于“基础研究—免疫学—临床康复”的复合型专业背景，我注重从疾病机制、身体功能到日常生活能力等不同层面理解康复需求。",
+    aboutP4: "在临床工作中，我重视以平静、专业和尊重的方式面对每一位来访者，并在适合的情况下将循证康复、针灸、反射疗法与患者教育相结合，重点关注功能恢复、独立性与生活质量。",
+    aboutP5: "我期待以我的专业经验、国际背景和投入，为机构的共同体建设与各项活动作出贡献。",
+    rehabText: "2012年，一次严重的交通事故成为我人生中的一个重要转折点。亲身经历康复过程，让我更加深入地理解许多人在康复过程中所面对的身体和心理挑战。这段经历也成为我继续接受康复专业教育并从事康复工作的一个重要动力。",
+
+    contactLabel: "联系",
+    contactTitle: "欢迎与我联系。",
+    contactText: "如果您对治疗或康复有任何问题，欢迎与我联系。",
+    phoneLabel: "电话：",
+    emailLabel: "邮箱：",
+    contactButton: "联系我",
+
+    footer: "© 2026 ØBRO 康复中心 · 哥本哈根",
+    pageTitle: "ØBRO 康复中心 | 康复与针灸"
+  }
+
+};
+
+
+function setLanguage(lang) {
+
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+  document.title = t.pageTitle;
+
+  document.getElementById("nav-about").innerHTML = t.navAbout;
+  document.getElementById("nav-treatment").innerHTML = t.navTreatment;
+  document.getElementById("nav-contact").innerHTML = t.navContact;
+
+  document.getElementById("hero-title").innerHTML = t.heroTitle;
+  document.getElementById("hero-text").innerHTML = t.heroText;
+  document.getElementById("hero-button").innerHTML = t.heroButton;
+
+  document.getElementById("intro-label").innerHTML = t.introLabel;
+  document.getElementById("intro-title").innerHTML = t.introTitle;
+  document.getElementById("intro-p1").innerHTML = t.introP1;
+  document.getElementById("intro-p2").innerHTML = t.introP2;
+
+  document.getElementById("services-label").innerHTML = t.servicesLabel;
+  document.getElementById("services-title").innerHTML = t.servicesTitle;
+
+  for (let i = 1; i <= 6; i++) {
+    document.getElementById(`service${i}-title`).innerHTML = t[`service${i}Title`];
+    document.getElementById(`service${i}-text`).innerHTML = t[`service${i}Text`];
+  }
+
+  document.getElementById("philosophy-label").innerHTML = t.philosophyLabel;
+  document.getElementById("philosophy-quote").innerHTML = t.philosophyQuote;
+  document.getElementById("philosophy-text").innerHTML = t.philosophyText;
+
+  document.getElementById("about-label").innerHTML = t.aboutLabel;
+  document.getElementById("about-name").innerHTML = t.aboutName;
+  document.getElementById("about-credentials").innerHTML = t.aboutCredentials;
+  document.getElementById("about-title").innerHTML = t.aboutTitle;
+  document.getElementById("about-p1").innerHTML = t.aboutP1;
+  document.getElementById("about-p2").innerHTML = t.aboutP2;
+  document.getElementById("about-p3").innerHTML = t.aboutP3;
+  document.getElementById("about-p4").innerHTML = t.aboutP4;
+  document.getElementById("about-p5").innerHTML = t.aboutP5;
+
+  document.getElementById("rehab-text").innerHTML = t.rehabText;
+
+  document.getElementById("contact-label").innerHTML = t.contactLabel;
+  document.getElementById("contact-title").innerHTML = t.contactTitle;
+  document.getElementById("contact-text").innerHTML = t.contactText;
+  document.getElementById("phone-label").innerHTML = t.phoneLabel;
+  document.getElementById("email-label").innerHTML = t.emailLabel;
+  document.getElementById("contact-button").innerHTML = t.contactButton;
+
+  document.getElementById("footer").innerHTML = t.footer;
+
+  document.querySelectorAll(".language-button").forEach(button => {
+    button.classList.toggle("active", button.dataset.lang === lang);
+  });
+
+  localStorage.setItem("siteLanguage", lang);
+}
+
+
+document.querySelectorAll(".language-button").forEach(button => {
+
+  button.addEventListener("click", function() {
+    setLanguage(this.dataset.lang);
+  });
+
+});
+
+
+const savedLanguage = localStorage.getItem("siteLanguage") || "da";
+
+setLanguage(savedLanguage);
+
+</script>
+
+<script>
+(function () {
+  function scrollToSection(id) {
+    const target = document.querySelector(id);
+    const header = document.querySelector("header");
+    if (!target || !header) return;
+
+    const headerHeight = header.getBoundingClientRect().height;
+    const extraGap = 24;
+    const top = target.getBoundingClientRect().top + window.pageYOffset
+                - headerHeight - extraGap;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: "smooth"
+    });
+  }
+
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const id = this.getAttribute("href");
+      if (!id || id === "#") return;
+      event.preventDefault();
+      scrollToSection(id);
+      history.replaceState(null, "", id);
+    });
+  });
+
+  // Also correct direct links / refreshes containing #om, #behandling or #kontakt.
+  window.addEventListener("load", function () {
+    if (["#om", "#behandling", "#kontakt"].includes(window.location.hash)) {
+      setTimeout(function () {
+        scrollToSection(window.location.hash);
+      }, 80);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
