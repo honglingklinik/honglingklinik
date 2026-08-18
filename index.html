@@ -19,8 +19,8 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
                    Arial, sans-serif;
-      color: #3f3b36;
-      background: #f7f5f0;
+      color: #31483B;
+      background: #F3F7F1;
       line-height: 1.7;
     }
 
@@ -82,7 +82,7 @@
     .language-button {
       border: none;
       background: transparent;
-      color: #625d55;
+      color: #52665A;
       cursor: pointer;
       font: inherit;
       padding: 4px 2px;
@@ -91,7 +91,7 @@
 
     .language-button:hover,
     .language-button.active {
-      color: #3f3b36;
+      color: #31483B;
       font-weight: 600;
     }
 
@@ -112,7 +112,7 @@
       font-size: 13px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #8b8378;
+      color: #718578;
       margin-bottom: 25px;
     }
 
@@ -128,22 +128,22 @@
     .hero-text {
       font-size: 20px;
       max-width: 650px;
-      color: #625d55;
+      color: #52665A;
       margin-bottom: 42px;
     }
 
     .button {
       display: inline-block;
       padding: 14px 28px;
-      border: 1px solid #777066;
+      border: 1px solid #667D6D;
       font-size: 14px;
       letter-spacing: 0.5px;
       transition: 0.3s;
     }
 
     .button:hover {
-      background: #3f3b36;
-      color: #f7f5f0;
+      background: #31483B;
+      color: #F3F7F1;
     }
 
     .section {
@@ -156,7 +156,7 @@
     }
 
     .intro {
-      border-top: 1px solid #ded9d0;
+      border-top: 1px solid #D4DFD4;
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 90px;
@@ -166,7 +166,7 @@
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #928a80;
+      color: #73877A;
     }
 
     h2 {
@@ -179,12 +179,12 @@
 
     .intro p {
       font-size: 18px;
-      color: #625d55;
+      color: #52665A;
       margin-bottom: 18px;
     }
 
     .services {
-      background: #eeebe4;
+      background: #E5EEE4;
     }
 
     .services-header {
@@ -197,17 +197,17 @@
       margin: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      border-top: 1px solid #d7d2c9;
+      border-top: 1px solid #C9D8CA;
     }
 
     .service {
       padding: 35px 10px;
-      border-bottom: 1px solid #d7d2c9;
+      border-bottom: 1px solid #C9D8CA;
     }
 
     .service:nth-child(odd) {
       padding-right: 50px;
-      border-right: 1px solid #d7d2c9;
+      border-right: 1px solid #C9D8CA;
     }
 
     .service:nth-child(even) {
@@ -222,7 +222,7 @@
     }
 
     .service p {
-      color: #6c665e;
+      color: #5D7164;
       font-size: 15px;
     }
 
@@ -241,11 +241,11 @@
 
     .philosophy p {
       margin-top: 30px;
-      color: #777067;
+      color: #65786C;
     }
 
     .about {
-      background: #f1eee8;
+      background: #EAF1E8;
     }
 
     .about-grid {
@@ -258,16 +258,16 @@
 
     .about-text p {
       font-size: 17px;
-      color: #625d55;
+      color: #52665A;
       margin-bottom: 18px;
     }
 
     .credentials {
       margin-top: 30px;
       padding-top: 25px;
-      border-top: 1px solid #d8d3ca;
+      border-top: 1px solid #CBD8CB;
       font-size: 14px;
-      color: #777067;
+      color: #65786C;
     }
 
     .contact {
@@ -281,7 +281,7 @@
 
     .contact p {
       font-size: 18px;
-      color: #625d55;
+      color: #52665A;
       margin-bottom: 10px;
     }
 
@@ -292,11 +292,11 @@
     }
 
     footer {
-      border-top: 1px solid #ded9d0;
+      border-top: 1px solid #D4DFD4;
       padding: 35px 30px;
       text-align: center;
       font-size: 13px;
-      color: #8a8379;
+      color: #708176;
     }
 
     @media (max-width: 900px) {
@@ -385,34 +385,55 @@
         font-size: 29px;
       }
     }
-  </style>
+  
+    header{background:#0F4D2F!important;border-bottom:none!important;backdrop-filter:none!important;}
+    .nav{max-width:1280px!important;min-height:165px!important;margin:auto;padding:18px 36px 16px!important;
+      display:grid!important;grid-template-columns:170px 1fr 370px!important;grid-template-rows:92px 45px!important;
+      align-items:center!important;gap:0 28px!important;}
+    .logo{grid-column:1;grid-row:1;display:flex!important;align-items:center!important;}
+    .brand-logo{width:145px;height:145px;object-fit:contain;border-radius:50%;}
+    .clinic-name{grid-column:2/4;grid-row:1;color:#fff;font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(34px,3.6vw,52px);font-weight:400;line-height:1.02;letter-spacing:-.3px;white-space:nowrap;text-align:left;}
+    .nav-right{grid-column:1/4;grid-row:2;width:100%;display:grid!important;grid-template-columns:1fr auto;align-items:center!important;color:#fff;}
+    .nav-links{justify-self:start;display:flex!important;gap:42px!important;font-size:16px!important;}
+    .nav-links a{color:#fff!important;}
+    .languages{justify-self:end;display:flex!important;gap:22px!important;font-size:16px!important;}
+    .language-button{color:rgba(255,255,255,.88)!important;}
+    .language-button:hover,.language-button.active{color:#fff!important;font-weight:600;}
+    .about-photo{margin-top:28px;}
+    .about-photo img{width:100%;max-width:300px;display:block;border-radius:5px;box-shadow:0 12px 30px rgba(49,72,59,.13);}
+    .about-text h3{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;line-height:1.3;margin:28px 0 14px;color:#31483B;}
+    #about-credentials{color:#65786C;font-size:14px;padding-bottom:20px;border-bottom:1px solid #CBD8CB;margin-bottom:24px;}
+    @media(max-width:900px){
+      .nav{min-height:auto!important;padding:12px 18px!important;grid-template-columns:92px 1fr!important;grid-template-rows:auto auto!important;gap:8px 14px!important;}
+      .brand-logo{width:82px;height:82px;}
+      .clinic-name{grid-column:2;grid-row:1;font-size:clamp(22px,5vw,32px);white-space:normal;}
+      .nav-right{grid-column:1/-1;grid-row:2;display:flex!important;flex-direction:row!important;justify-content:space-between;align-items:center!important;flex-wrap:wrap;gap:10px!important;}
+      .nav-links{gap:16px!important;font-size:13px!important;}
+      .languages{gap:10px!important;font-size:12px!important;}
+    }
+
+</style>
 </head>
 
 <body>
 
 <header>
   <nav class="nav">
-
-    <div class="logo" id="logo">
-      ØBRO REHABILITERINGS KLINIK
-    </div>
-
+    <div class="logo"><img class="brand-logo" src="obro-logo-final.jpg" alt="Øbro Rehabiliterings Klinik logo"></div>
+    <div class="clinic-name">Øbro Rehabiliterings Klinik</div>
     <div class="nav-right">
-
       <div class="nav-links">
         <a href="#om" id="nav-about">Om mig</a>
         <a href="#behandling" id="nav-treatment">Behandling</a>
         <a href="#kontakt" id="nav-contact">Kontakt</a>
       </div>
-
       <div class="languages">
         <button class="language-button active" data-lang="da">🇩🇰 Dansk</button>
         <button class="language-button" data-lang="en">🇬🇧 English</button>
         <button class="language-button" data-lang="zh">🇨🇳 中文</button>
       </div>
-
     </div>
-
   </nav>
 </header>
 
@@ -423,12 +444,7 @@
 
   <section class="hero">
     <div class="hero-content">
-
-      <div class="small-title" id="hero-small">
-        Rehabilitering · Akupunktur · Zoneterapi
-      </div>
-
-      <h1 id="hero-title">
+<h1 id="hero-title">
         Kroppen har<br>
         sin egen vej<br>
         til balance.
@@ -583,6 +599,7 @@
       <div class="section-label" id="about-label">
         Om mig
       </div>
+      <div class="about-photo"><img src="hongling-photo-final.jpg" alt="Hongling Mo Sønnichsen"></div>
     </div>
 
     <div class="about-text">
@@ -618,12 +635,7 @@
         giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer
         til genopbygning af funktion og hverdagsliv.
       </p>
-
-      <h3 id="rehab-title">
-        Min egen rehabilitering
-      </h3>
-
-      <p id="rehab-text">
+<p id="rehab-text">
         En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv.
         Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske
         og psykiske udfordringer, som mange mennesker møder under rehabilitering.
@@ -637,6 +649,8 @@
         og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed
         og livskvalitet.
       </p>
+
+      <p id="about-p5">Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.</p>
 
     </div>
 
@@ -749,8 +763,7 @@ const translations = {
     aboutP2: "Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi og immunologi. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt om screening og analyse af udvalgte kinesiske lægeurters indholdsstoffer og deres betydning for immunfunktionen. Det blev begyndelsen på min forsknings- og faglige tilknytning til Danmark.",
     aboutP3: "Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering. Min kombinerede erfaring inden for grundforskning, immunologi og klinisk rehabilitering giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer til genopbygning af funktion og hverdagsliv.",
     aboutP4: "I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed og respekt. Jeg kombinerer evidensbaseret rehabilitering med akupunktur, zoneterapi og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed og livskvalitet.",
-
-    rehabTitle: "Min egen rehabilitering",
+    aboutP5: "Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.",
     rehabText: "En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv. Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske og psykiske udfordringer, som mange mennesker møder under rehabilitering. Erfaringen blev en vigtig inspiration for min videre uddannelse og mit arbejde inden for rehabilitering.",
 
     contactLabel: "Kontakt",
@@ -815,8 +828,7 @@ const translations = {
     aboutP2: "Early in my career, I worked in teaching and research within pathophysiology and immunology. In 2000, I took part as an exchange researcher in a Danish-Chinese research project screening and analysing selected compounds from Chinese medicinal herbs and their effects on immune function. This marked the beginning of my research and professional connection with Denmark.",
     aboutP3: "I am committed to integrating traditional treatment approaches with modern rehabilitation. My combined background in basic research, immunology and clinical rehabilitation gives me a multidisciplinary perspective—from understanding biological mechanisms to rebuilding function and everyday life.",
     aboutP4: "In my clinical work, I aim to meet each person with calm, professionalism and respect. When relevant, I combine evidence-based rehabilitation with acupuncture, reflexology and patient education, focusing on function, independence and quality of life.",
-
-    rehabTitle: "My Own Rehabilitation",
+    aboutP5: "I look forward to contributing my professional experience, international background and commitment to the organisation’s community and activities.",
     rehabText: "A serious traffic accident in 2012 became an important turning point in my life. My own rehabilitation process gave me a deeper understanding of the physical and psychological challenges that many people face during rehabilitation. This experience became an important inspiration for my further education and my work in rehabilitation.",
 
     contactLabel: "Contact",
@@ -881,8 +893,7 @@ const translations = {
     aboutP2: "早年从事病理生理学与免疫学教学和科研工作。2000年作为交换学者参与中丹合作项目“筛选和分析部分中草药成分对免疫功能的作用”，由此开启在丹麦的科研与专业发展经历。",
     aboutP3: "多年来，我持续关注传统医学与现代康复理念及技术的结合。基于“基础研究—免疫学—临床康复”的复合型专业背景，我注重从疾病机制、身体功能到日常生活能力等不同层面理解康复需求。",
     aboutP4: "在临床工作中，我重视以平静、专业和尊重的方式面对每一位来访者，并在适合的情况下将循证康复、针灸、反射疗法与患者教育相结合，重点关注功能恢复、独立性与生活质量。",
-
-    rehabTitle: "我的康复经历",
+    aboutP5: "我期待以我的专业经验、国际背景和投入，为机构的共同体建设与各项活动作出贡献。",
     rehabText: "2012年，一次严重的交通事故成为我人生中的一个重要转折点。亲身经历康复过程，让我更加深入地理解许多人在康复过程中所面对的身体和心理挑战。这段经历也成为我继续接受康复专业教育并从事康复工作的一个重要动力。",
 
     contactLabel: "联系",
@@ -906,13 +917,10 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.title = t.pageTitle;
 
-  document.getElementById("logo").innerHTML = t.logo;
-
   document.getElementById("nav-about").innerHTML = t.navAbout;
   document.getElementById("nav-treatment").innerHTML = t.navTreatment;
   document.getElementById("nav-contact").innerHTML = t.navContact;
 
-  document.getElementById("hero-small").innerHTML = t.heroSmall;
   document.getElementById("hero-title").innerHTML = t.heroTitle;
   document.getElementById("hero-text").innerHTML = t.heroText;
   document.getElementById("hero-button").innerHTML = t.heroButton;
@@ -942,8 +950,8 @@ function setLanguage(lang) {
   document.getElementById("about-p2").innerHTML = t.aboutP2;
   document.getElementById("about-p3").innerHTML = t.aboutP3;
   document.getElementById("about-p4").innerHTML = t.aboutP4;
+  document.getElementById("about-p5").innerHTML = t.aboutP5;
 
-  document.getElementById("rehab-title").innerHTML = t.rehabTitle;
   document.getElementById("rehab-text").innerHTML = t.rehabText;
 
   document.getElementById("contact-label").innerHTML = t.contactLabel;
