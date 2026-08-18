@@ -1164,5 +1164,45 @@ const savedLanguage = localStorage.getItem("siteLanguage") || "da";
 setLanguage(savedLanguage);
 
 </script>
+
+<script>
+(function () {
+  function scrollToSection(id) {
+    const target = document.querySelector(id);
+    const header = document.querySelector("header");
+    if (!target || !header) return;
+
+    const headerHeight = header.getBoundingClientRect().height;
+    const extraGap = 24;
+    const top = target.getBoundingClientRect().top + window.pageYOffset
+                - headerHeight - extraGap;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: "smooth"
+    });
+  }
+
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const id = this.getAttribute("href");
+      if (!id || id === "#") return;
+      event.preventDefault();
+      scrollToSection(id);
+      history.replaceState(null, "", id);
+    });
+  });
+
+  // Also correct direct links / refreshes containing #om, #behandling or #kontakt.
+  window.addEventListener("load", function () {
+    if (["#om", "#behandling", "#kontakt"].includes(window.location.hash)) {
+      setTimeout(function () {
+        scrollToSection(window.location.hash);
+      }, 80);
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
