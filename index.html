@@ -926,6 +926,183 @@
       }
     }
 
+
+/* ===== FINAL POLISH ROUND ===== */
+
+/* Treatment: each service becomes its own individual card */
+.treatment-item,
+.service-item,
+.treatment-card,
+.service-card,
+.treatments-grid > div,
+.services-grid > div {
+  border: 1px solid rgba(38,82,59,.72) !important;
+  border-radius: 8px !important;
+  padding: 24px 24px !important;
+  background: rgba(255,255,255,.28) !important;
+  box-shadow: 0 4px 14px rgba(35,65,48,.045);
+}
+
+/* Contact: warm, friendly framed card */
+.contact-card,
+.contact-box,
+#kontakt .contact-info,
+#contact .contact-info {
+  position: relative;
+  border: 2px solid rgba(73,107,75,.72) !important;
+  border-radius: 28px !important;
+  padding: 38px 34px !important;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(202,167,117,.10), transparent 24%),
+    radial-gradient(circle at 88% 88%, rgba(202,167,117,.10), transparent 24%),
+    rgba(255,253,247,.52) !important;
+  box-shadow: 0 10px 28px rgba(53,75,58,.07);
+}
+
+.contact-card::before,
+.contact-box::before,
+#kontakt .contact-info::before,
+#contact .contact-info::before {
+  content: "♡";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 12px;
+  background: #f5f7f1;
+  color: #b78572;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* Contact button stays visually separate */
+#kontakt .button,
+#contact .button,
+.contact-card .button,
+.contact-box .button {
+  border-radius: 999px !important;
+}
+
+/* Approved philosophy / slogan frame */
+.philosophy-frame,
+.motto-frame {
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 50px 56px 42px;
+  text-align: center;
+  border: 2px solid #7b8764;
+  outline: 1px solid rgba(123,135,100,.62);
+  outline-offset: -10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.22);
+}
+
+.philosophy-frame::before,
+.philosophy-frame::after,
+.motto-frame::before,
+.motto-frame::after {
+  content: "❦";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 12px;
+  background: #f5f7f1;
+  color: #7b8764;
+  font-size: 23px;
+}
+.philosophy-frame::before,
+.motto-frame::before { top: -15px; }
+.philosophy-frame::after,
+.motto-frame::after { bottom: -15px; }
+
+html[lang="zh"] .hero-text {
+  max-width: 900px !important;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 700px) {
+  .philosophy-frame,
+  .motto-frame {
+    padding: 38px 22px 34px;
+  }
+}
+
+
+/* ===== FINAL SERVICE CARDS ===== */
+.service-grid {
+  border-top: none !important;
+  gap: 18px !important;
+}
+.service,
+.service:nth-child(odd),
+.service:nth-child(even) {
+  border: 1px solid rgba(47,88,64,.70) !important;
+  border-radius: 10px !important;
+  padding: 26px 28px !important;
+  background: rgba(255,255,255,.30) !important;
+  box-shadow: 0 5px 16px rgba(45,70,53,.04);
+}
+
+
+/* ===== FINAL FRIENDLY CONTACT FRAME ===== */
+.contact-info {
+  position: relative;
+  max-width: 620px;
+  margin: 38px auto 28px !important;
+  padding: 38px 42px !important;
+  border: 2px solid rgba(91,117,85,.72) !important;
+  border-radius: 30px !important;
+  outline: 1px dashed rgba(190,154,107,.55);
+  outline-offset: -11px;
+  background:
+    radial-gradient(circle at 7% 10%, rgba(191,159,113,.10), transparent 22%),
+    radial-gradient(circle at 93% 90%, rgba(191,159,113,.10), transparent 22%),
+    rgba(255,253,247,.48) !important;
+  box-shadow: 0 10px 26px rgba(52,75,57,.065);
+}
+.contact-info::before {
+  content: "♡";
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 12px;
+  background: #f5f7f1;
+  color: #b98576;
+  font-size: 27px;
+  line-height: 1;
+}
+#contact-button {
+  border-radius: 999px !important;
+}
+
+
+/* ===== FINAL PHILOSOPHY FRAME ===== */
+#philosophy-label:empty {
+  display: none !important;
+}
+.philosophy-frame {
+  max-width: 880px !important;
+  padding: 54px 58px 46px !important;
+  border: 2px solid #7b8764 !important;
+  outline: 1px solid rgba(123,135,100,.62) !important;
+  outline-offset: -10px !important;
+}
+.philosophy-frame blockquote {
+  margin: 0 !important;
+}
+.philosophy-frame #philosophy-text {
+  margin-top: 34px !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px !important;
+  color: #315b45 !important;
+}
+.philosophy-frame #philosophy-text strong {
+  color: #176b42;
+  font-weight: 600;
+}
+
 </style>
 </head>
 
@@ -942,9 +1119,9 @@
         <a href="#kontakt" id="nav-contact">Kontakt</a>
       </div>
       <div class="languages">
-        <button class="language-button active" data-lang="da">🇩🇰 Dansk</button>
-        <button class="language-button" data-lang="en">🇬🇧 English</button>
-        <button class="language-button" data-lang="zh">🇨🇳 中文</button>
+        <button type="button" class="language-button active" data-lang="da">🇩🇰 Dansk</button>
+        <button type="button" class="language-button" data-lang="en">🇬🇧 English</button>
+        <button type="button" class="language-button" data-lang="zh">🇨🇳 中文</button>
       </div>
     </div>
   </nav>
@@ -1057,22 +1234,13 @@
 
   <section class="section">
 
-    <div class="philosophy">
+    <div class="philosophy philosophy-frame">
 
-      <div class="section-label" id="philosophy-label">
-        Min tilgang
-      </div>
+      <div class="section-label" id="philosophy-label"></div>
 
-      <blockquote id="philosophy-quote">
-        “At rehabilitere er ikke kun at behandle
-        det, der gør ondt.
-        Det er at hjælpe kroppen med igen
-        at finde muligheder.”
-      </blockquote>
+      <blockquote id="philosophy-quote">Rehabilitering handler ikke kun om at behandle smerter,<br>men om at hjælpe kroppen med at genfinde sine muligheder</blockquote>
 
-      <p id="philosophy-text">
-        Ro · nærvær · funktion · bevægelse
-      </p>
+      <p id="philosophy-text">Min tilgang: <strong>rolig</strong> · fokus · bevægelse · funktion</p>
 
     </div>
 
@@ -1184,9 +1352,9 @@ const translations = {
     service5Text: "Med udgangspunkt i et helhedsorienteret perspektiv kan akupunktur, zoneterapi og andre relevante traditionelle behandlingsprincipper integreres i rehabiliteringen, når det er relevant, med fokus på funktion, balance og livskvalitet.",
     service6Title: "Tai Chi og rehabiliterende bevægelse",
     service6Text: "Tai Chis rolige og koordinerede bevægelser kan, når det er relevant, indgå i rehabiliteringen med fokus på balance, koordination, bevægelighed, kropskontrol og afspænding. Øvelserne tilpasses den enkeltes funktion og muligheder.",
-    philosophyLabel: "Min tilgang",
-    philosophyQuote: "“At rehabilitere er ikke kun at behandle det, der gør ondt.<br>Det er at hjælpe kroppen med igen at finde muligheder.”",
-    philosophyText: "Ro · nærvær · funktion · bevægelse",
+    philosophyLabel: "",
+    philosophyQuote: "Rehabilitering handler ikke kun om at behandle smerter,<br>men om at hjælpe kroppen med at genfinde sine muligheder",
+    philosophyText: "Min tilgang: <strong>rolig</strong> · fokus · bevægelse · funktion",
     aboutLabel: "Om mig",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "MSc i Rehabilitering · RAB Akupunktør · RAB Zoneterapeut",
@@ -1234,9 +1402,9 @@ const translations = {
     service5Text: "From a holistic perspective, acupuncture, reflexology and other relevant traditional treatment principles may be integrated into rehabilitation when appropriate, with a focus on function, balance and quality of life.",
     service6Title: "Tai Chi and rehabilitative movement",
     service6Text: "When appropriate, the gentle and coordinated movements of Tai Chi can be incorporated into rehabilitation to support balance, coordination, mobility, body control and relaxation. Exercises are adapted to each person’s functional abilities.",
-    philosophyLabel: "My approach",
-    philosophyQuote: "“Rehabilitation is not only about treating what hurts.<br>It is about helping the body rediscover its possibilities.”",
-    philosophyText: "Calm · presence · function · movement",
+    philosophyLabel: "",
+    philosophyQuote: "Rehabilitation is not only about treating pain,<br>but about helping the body rediscover its possibilities",
+    philosophyText: "My philosophy: <strong>relax</strong> · focus · movement · function",
     aboutLabel: "About me",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "MSc in Rehabilitation · RAB Acupuncturist · RAB Reflexologist",
@@ -1267,7 +1435,7 @@ const translations = {
     heroText: "以您的个人需求和目标为出发点，提供个性化的康复治疗与指导，专注于功能、运动和生活质量。",
     heroButton: "联系康复中心",
     introLabel: "Øbro 康复中心",
-    introTitle: "安静而个性化的康复方式。",
+    introTitle: "轻松而个性化的康复方式",
     introP1: "每一个身体都有自己的故事。因此，治疗从您本人、您的需求以及您的日常生活出发。",
     introP2: "我们的目标不仅是减轻疼痛，更是改善身体功能，让您在运动和日常生活中更加安心。",
     servicesLabel: "治疗与康复",
@@ -1284,9 +1452,9 @@ const translations = {
     service5Text: "结合中医整体观，根据个人身体状况与功能问题，在适合的情况下将针灸、反射疗法等传统治疗方法融入康复过程，以支持身体功能、平衡与生活质量。",
     service6Title: "太极与康复运动指导",
     service6Text: "根据个人身体状况，在适合的情况下将太极柔和、协调的运动方式融入康复训练，关注平衡、协调、活动能力、身体控制与身心放松，并根据个人功能与能力调整练习。",
-    philosophyLabel: "我的理念",
-    philosophyQuote: "“康复不仅是治疗疼痛。<br>更是帮助身体重新发现可能性的过程。”",
-    philosophyText: "宁静 · 专注 · 功能 · 运动",
+    philosophyLabel: "",
+    philosophyQuote: "康复不仅是治疗疼痛，<br>更是帮助身体重新发现可能性的过程",
+    philosophyText: "我的理念：<strong>轻松</strong> · 专注 · 运动 · 功能",
     aboutLabel: "关于我",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "康复学硕士 MSc · RAB 注册针灸师 · RAB 注册反射疗法治疗师",
@@ -1382,6 +1550,11 @@ document.getElementById("phone-label").innerHTML = t.phoneLabel;
     });
   }
 
+
+  if (!activeHash || activeHash === "#top" || activeHash === "#home") {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
   localStorage.setItem("siteLanguage", lang);
 }
 
@@ -1453,6 +1626,46 @@ setLanguage(savedLanguage);
         goToSection(window.location.hash, false);
       }, 120);
     }
+  });
+})();
+</script>
+
+
+<script>
+(function () {
+  function polishFinalLayout() {
+    // Keep translated HTML line breaks where explicitly supplied.
+    var heroText = document.getElementById('hero-text');
+    var lang = document.documentElement.lang || 'da';
+    if (heroText && lang === 'zh') {
+      heroText.innerHTML = '以您的个人需求和目标为出发点，提供个性化的康复治疗与指导，<br>专注于功能、运动和生活质量。';
+    }
+
+    // Make treatment children individual cards when the page uses a treatment grid.
+    var grids = document.querySelectorAll('.treatment-grid, .treatments-grid, .services-grid, .treatment-list');
+    grids.forEach(function(grid) {
+      Array.from(grid.children).forEach(function(child) {
+        child.classList.add('service-card');
+      });
+    });
+
+    // Give the contact information area the friendly frame.
+    var contactSection = document.getElementById('kontakt') || document.getElementById('contact');
+    if (contactSection) {
+      var box = contactSection.querySelector('.contact-info, .contact-details, .contact-content');
+      if (box) box.classList.add('contact-card');
+    }
+
+    // Restore approved philosophy frame, but do not alter its wording.
+    var philosophy = document.querySelector('.philosophy, .motto, .philosophy-content, .motto-content');
+    if (philosophy) philosophy.classList.add('philosophy-frame');
+  }
+
+  document.addEventListener('DOMContentLoaded', polishFinalLayout);
+  document.querySelectorAll('[data-lang]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setTimeout(polishFinalLayout, 0);
+    });
   });
 })();
 </script>
