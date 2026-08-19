@@ -689,6 +689,83 @@
       }
     }
 
+
+    /* ===== FINAL 2026-08-19 POLISH ===== */
+    .hero, .services, .about, .contact, .service, .about-text, .contact-inner {
+      height: auto !important;
+      min-height: 0;
+    }
+
+    .service-grid { align-items: stretch; }
+    .service { display:flex; flex-direction:column; justify-content:flex-start; }
+
+    /* Keep portrait visible while reading the long Om mig text on desktop. */
+    .about-grid > div:first-child { align-self: stretch; }
+    .about-photo {
+      position: sticky;
+      top: 225px;
+      align-self: start;
+      margin-top: 0 !important;
+    }
+    .about-photo img {
+      width: 100%;
+      max-width: 370px !important;
+      height: auto;
+      display: block;
+    }
+
+    .about-text p { margin-bottom: 11px !important; }
+
+    /* Anchor positions remain correct with the sticky header. */
+    #om, #behandling, #kontakt { scroll-margin-top: 220px; }
+
+    @media (max-width: 900px) {
+      .about-photo { position: static; top: auto; }
+      .about-photo img { max-width: 340px !important; margin: 0 auto; }
+      #om, #behandling, #kontakt { scroll-margin-top: 145px; }
+    }
+
+
+    /* ===== FINAL HEADING & CONTACT POLISH ===== */
+
+    #about-name,
+    #services-title,
+    #contact-title {
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-size: clamp(34px, 3.3vw, 46px) !important;
+      line-height: 1.14 !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.2px;
+    }
+
+    #services-title {
+      max-width: 1120px !important;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    #contact-title {
+      margin-bottom: 34px !important;
+    }
+
+    .contact-info {
+      margin-top: 10px !important;
+    }
+
+    @media (max-width: 1050px) {
+      #services-title {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 900px) {
+      #about-name,
+      #services-title,
+      #contact-title {
+        font-size: clamp(30px, 7vw, 39px) !important;
+      }
+    }
+
 </style>
 </head>
 
@@ -720,12 +797,9 @@
 
   <section class="hero">
     <div class="hero-content">
-<h1 id="hero-title">Vejen tilbage til bedre funktion og livskvalitet.</h1>
+<h1 id="hero-title">Bedre Funktion、Mere Bevægelse og Bedre Livskvalitet</h1>
 
-      <p class="hero-text" id="hero-text">
-        Individuel rehabilitering med fokus på kroppens funktion,
-        bevægelse og livskvalitet.
-      </p>
+      <p class="hero-text" id="hero-text">Med udgangspunkt i den enkeltes behov og mål tilbyder jeg individuel rehabilitering og vejledning med fokus på funktion, bevægelse og livskvalitet.</p>
 
       <a class="button" href="#kontakt" id="hero-button">
         Kontakt klinikken
@@ -775,57 +849,39 @@
         Behandling & rehabilitering
       </div>
 
-      <h2 id="services-title">Hvad kan du få hjælp til hos Øbro Rehabiliterings Klinik?</h2>
+      <h2 id="services-title">Hvad kan du få til hos Øbro Rehabiliterings Klinik?</h2>
     </div>
 
     <div class="service-grid">
 
       <div class="service">
-        <h3 id="service1-title">Nakke- og rygsmerter</h3>
-        <p id="service1-text">
-          Individuel behandling og funktionel træning med fokus
-          på bevægelighed og hverdagsfunktion.
-        </p>
+        <h3 id="service1-title">Ryg- og nakkesmerter</h3>
+        <p id="service1-text">Ved smerter i ryg, nakke og skuldre samt nedsat bevægelighed tager behandlingen udgangspunkt i en individuel vurdering, rehabiliterende træning og relevante behandlingsmetoder med fokus på bedre funktion i hverdagen.</p>
       </div>
 
       <div class="service">
-        <h3 id="service2-title">Idrætsskader</h3>
-        <p id="service2-text">
-          Rehabilitering efter belastninger og skader med fokus
-          på en sikker og gradvis tilbagevenden til aktivitet.
-        </p>
+        <h3 id="service2-title">Sportsskader og funktionsproblemer</h3>
+        <p id="service2-text">Ved skader efter sport eller daglig aktivitet samt muskuloskeletale funktionsproblemer arbejder vi gradvist med bevægelse, styrke og kropskontrol for at støtte genopbygningen af funktion.</p>
       </div>
 
       <div class="service">
-        <h3 id="service3-title">Postoperativ rehabilitering</h3>
-        <p id="service3-text">
-          Støtte til genopbygning af funktion, styrke og bevægelse
-          efter operation.
-        </p>
+        <h3 id="service3-title">Rehabilitering efter operation og sygdom</h3>
+        <p id="service3-text">Rehabiliteringen tilpasses den enkeltes situation og fase efter operation eller sygdom med fokus på gradvist at genopbygge funktion, bevægelighed og selvstændighed i hverdagen.</p>
       </div>
 
       <div class="service">
-        <h3 id="service4-title">Kroniske smerter</h3>
-        <p id="service4-text">
-          En helhedsorienteret tilgang til længerevarende smerter
-          og nedsat funktion.
-        </p>
+        <h3 id="service4-title">Kroniske smerter og længerevarende funktionsproblemer</h3>
+        <p id="service4-text">Ved vedvarende smerter eller længerevarende funktionsbegrænsninger arbejder vi med funktion, bevægelse og relevante hverdagsfaktorer med henblik på at styrke den enkeltes muligheder for langsigtet egenhåndtering.</p>
       </div>
 
       <div class="service">
-        <h3 id="service5-title">Funktionel genoptræning</h3>
-        <p id="service5-text">
-          Træning, der tager udgangspunkt i kroppens aktuelle
-          funktion og dine konkrete mål.
-        </p>
+        <h3 id="service5-title">Traditionel kinesisk medicin</h3>
+        <p id="service5-text">Med udgangspunkt i et helhedsorienteret perspektiv kan akupunktur, zoneterapi og andre relevante traditionelle behandlingsprincipper integreres i rehabiliteringen, når det er relevant, med fokus på funktion, balance og livskvalitet.</p>
       </div>
 
       <div class="service">
-        <h3 id="service6-title">Akupunktur & zoneterapi</h3>
-        <p id="service6-text">
-          Komplementære behandlingsformer, som kan indgå
-          som en del af en individuel behandlingsplan.
-        </p>
+        <h3 id="service6-title">Tai Chi og rehabiliterende bevægelse</h3>
+        <p id="service6-text">Tai Chis rolige og koordinerede bevægelser kan, når det er relevant, indgå i rehabiliteringen med fokus på balance, koordination, bevægelighed, kropskontrol og afspænding. Øvelserne tilpasses den enkeltes funktion og muligheder.</p>
       </div>
 
     </div>
@@ -870,60 +926,21 @@
 
     <div>
       <div class="about-photo">
-        <img src="hongling-photo-updated.jpg" alt="Hongling Mo Sønnichsen">
+        <img src="hongling-photo-original.jpg" alt="Hongling Mo Sønnichsen">
       </div>
     </div>
 
     <div class="about-text">
-
-      <h2 id="about-name">
-        Hongling Mo Sønnichsen
-      </h2>
-
-      <p id="about-credentials">
-        MSc i Rehabiliteringsvidenskab · RAB Akupunktør · RAB Zoneterapeut
-      </p>
-
-      <h3 id="about-title">
-        Min faglige baggrund
-      </h3>
-
-      <p id="about-p1">
-        Jeg arbejder i dag med klinisk rehabilitering på et tværfagligt sundhedscenter i København.
-        Jeg har en kandidatuddannelse i rehabilitering fra Syddansk Universitet og en medicinsk
-        uddannelsesbaggrund fra Guangxi Medical University i Kina.
-      </p>
-
-      <p id="about-p2">
-        Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi
-        og immunologi. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt
-        om screening og analyse af udvalgte kinesiske lægeurters indholdsstoffer og deres betydning
-        for immunfunktionen. Det blev begyndelsen på min forsknings- og faglige tilknytning til Danmark.
-      </p>
-
-      <p id="about-p3">
-        Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering.
-        Min kombinerede erfaring inden for grundforskning, immunologi og klinisk rehabilitering
-        giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer
-        til genopbygning af funktion og hverdagsliv.
-      </p>
-<p id="rehab-text">
-        En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv.
-        Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske
-        og psykiske udfordringer, som mange mennesker møder under rehabilitering.
-        Erfaringen blev en vigtig inspiration for min videre uddannelse og mit arbejde
-        inden for rehabilitering.
-      </p>
-
-      <p id="about-p4">
-        I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed
-        og respekt. Jeg kombinerer evidensbaseret rehabilitering med akupunktur, zoneterapi
-        og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed
-        og livskvalitet.
-      </p>
-
-      <p id="about-p5">Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.</p>
-
+      <h2 id="about-name">Hongling Mo Sønnichsen</h2>
+      <p id="about-credentials">MSc i Rehabilitering · RAB Akupunktør · RAB Zoneterapeut</p>
+      <h3 id="about-title">Min faglige baggrund</h3>
+      <p id="about-p1">Jeg arbejder i dag med klinisk rehabilitering på et tværfagligt sundhedscenter i København. Jeg har en kandidatuddannelse i rehabilitering fra Syddansk Universitet og en medicinsk uddannelsesbaggrund fra Guangxi Medical University i Kina.</p>
+      <p id="about-p2">Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi og immunologi i Kina. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt, hvor jeg arbejdede med ekstraktion og analyse af indholdsstoffer fra udvalgte kinesiske lægeurter samt deres potentielle betydning for immunfunktionen. Det blev begyndelsen på min forskningsmæssige og faglige tilknytning til Danmark.</p>
+      <p id="about-p3">Siden 2022 har jeg studeret under professor og ph.d. Ma Shouchun med særlig fordybelse i Zhang Zhongjings Shang Han Za Bing Lun og den klassiske kinesiske medicinske tænkning. Jeg er medlem af forskningsforeningen for Fuling-versionen af Shang Han Za Bing Lun og deltager i studiegruppen for Recompiled Shi-annotated Shang Han Za Bing Lun (Fuling-versionen). Studiegruppen samler forskere og fagpersoner fra forskellige dele af verden med interesse for Shang Han Lun og Jin Gui Yao Lue med henblik på fælles studie og forskning i Fuling-versionen af Shang Han Za Bing Lun. Gennem dette systematiske arbejde med klassisk teori og klinisk tænkning har jeg uddybet min forståelse af den helhedsorienterede tilgang i kinesisk medicin, mønstergenkendelse og individuelt tilpasset behandling. Jeg har publiceret flere videnskabelige artikler inden for medicin, immunologi, rehabilitering og beslægtede områder.</p>
+      <p id="rehab-text">En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv. Min egen langvarige rehabiliteringsproces gav mig en dybere forståelse af de fysiske og psykiske udfordringer, der kan opstå under et rehabiliteringsforløb. Erfaringen blev samtidig en vigtig motivation for min videre uddannelse og mit arbejde inden for rehabilitering.</p>
+      <p id="about-p4">Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering. Min baggrund inden for medicin, grundforskning, immunologi og klinisk rehabilitering giver mig mulighed for at betragte rehabilitering fra et tværfagligt perspektiv – fra forståelsen af kroppens biologiske mekanismer til genopbygning af funktion, selvstændighed og livskvalitet.</p>
+      <p id="about-p5">I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed og respekt. Med udgangspunkt i den enkeltes behov og mål kombinerer jeg evidensbaseret rehabilitering med akupunktur, zoneterapi, principper fra kinesisk medicin og relevant rehabiliterende bevægelse. Fokus er på funktion, bevægelse, selvstændighed og livskvalitet samt på patientuddannelse og udvikling af den enkeltes evne til egenhåndtering.</p>
+      <p id="about-p6">Mit ønske er at bruge min faglige erfaring, tværkulturelle baggrund og forståelse af rehabilitering til at hjælpe den enkelte med at genvinde bedst mulig funktion, bevare bevægelse og selvstændighed og opnå en bedre livskvalitet.</p>
     </div>
 
   </div>
@@ -942,26 +959,18 @@
       </div>
 
       <h2 id="contact-title">
-        Du er velkommen til at kontakte mig.
+        Du er velkommen til at kontakte mig
       </h2>
-
-      <p id="contact-text">
-        Har du spørgsmål om behandling eller rehabilitering,
-        er du velkommen til at tage kontakt.
-      </p>
-
-      <div class="contact-info">
+<div class="contact-info">
 
         Østerbrogade 62, 3. tv.<br>
         2100 København Ø<br><br>
 
         <strong id="phone-label">Telefon:</strong>
-        <a href="tel:+4526288888">+45 26 28 88 88</a><br>
+        <a href="tel:+4526288888">26288888</a><br>
 
         <strong id="email-label">E-mail:</strong>
-        <a href="mailto:mhl7681@gmail.com">
-          mhl7681@gmail.com
-        </a>
+        <a href="mailto:mhl7681@gmail.com">mhl7681@gmail.com</a>
 
       </div>
 
@@ -986,197 +995,153 @@
 const translations = {
 
   da: {
-    logo: "ØBRO REHABILITERINGS KLINIK",
-
+    logo: "Øbro Rehabiliterings Klinik",
     navAbout: "Om mig",
     navTreatment: "Behandling",
     navContact: "Kontakt",
-
-    heroSmall: "Rehabilitering · Akupunktur · Zoneterapi",
-    heroTitle: "Vejen tilbage til bedre funktion og livskvalitet.",
-    heroText: "Individuel rehabilitering med fokus på kroppens funktion, bevægelse og livskvalitet.",
+    heroTitle: "Bedre Funktion、Mere Bevægelse og Bedre Livskvalitet",
+    heroText: "Med udgangspunkt i den enkeltes behov og mål tilbyder jeg individuel rehabilitering og vejledning med fokus på funktion, bevægelse og livskvalitet.",
     heroButton: "Kontakt klinikken",
-
-    introLabel: "ØBRO REHABILITERINGS KLINIK",
+    introLabel: "Øbro Rehabiliterings Klinik",
     introTitle: "En rolig og individuel tilgang til rehabilitering.",
     introP1: "Hver krop har sin egen historie. Derfor tager behandlingen udgangspunkt i dig, dine behov og din hverdag.",
     introP2: "Målet er ikke kun at reducere smerter, men at forbedre kroppens funktion og skabe større tryghed i bevægelsen.",
-
     servicesLabel: "Behandling & rehabilitering",
-    servicesTitle: "Hvad kan du få hjælp til hos Øbro Rehabiliterings Klinik?",
-
-    service1Title: "Nakke- og rygsmerter",
-    service1Text: "Individuel behandling og funktionel træning med fokus på bevægelighed og hverdagsfunktion.",
-
-    service2Title: "Idrætsskader",
-    service2Text: "Rehabilitering efter belastninger og skader med fokus på en sikker og gradvis tilbagevenden til aktivitet.",
-
-    service3Title: "Postoperativ rehabilitering",
-    service3Text: "Støtte til genopbygning af funktion, styrke og bevægelse efter operation.",
-
-    service4Title: "Kroniske smerter",
-    service4Text: "En helhedsorienteret tilgang til længerevarende smerter og nedsat funktion.",
-
-    service5Title: "Funktionel genoptræning",
-    service5Text: "Træning, der tager udgangspunkt i kroppens aktuelle funktion og dine konkrete mål.",
-
-    service6Title: "Akupunktur & zoneterapi",
-    service6Text: "Komplementære behandlingsformer, som kan indgå som en del af en individuel behandlingsplan.",
-
+    servicesTitle: "Hvad kan du få til hos Øbro Rehabiliterings Klinik?",
+    service1Title: "Ryg- og nakkesmerter",
+    service1Text: "Ved smerter i ryg, nakke og skuldre samt nedsat bevægelighed tager behandlingen udgangspunkt i en individuel vurdering, rehabiliterende træning og relevante behandlingsmetoder med fokus på bedre funktion i hverdagen.",
+    service2Title: "Sportsskader og funktionsproblemer",
+    service2Text: "Ved skader efter sport eller daglig aktivitet samt muskuloskeletale funktionsproblemer arbejder vi gradvist med bevægelse, styrke og kropskontrol for at støtte genopbygningen af funktion.",
+    service3Title: "Rehabilitering efter operation og sygdom",
+    service3Text: "Rehabiliteringen tilpasses den enkeltes situation og fase efter operation eller sygdom med fokus på gradvist at genopbygge funktion, bevægelighed og selvstændighed i hverdagen.",
+    service4Title: "Kroniske smerter og længerevarende funktionsproblemer",
+    service4Text: "Ved vedvarende smerter eller længerevarende funktionsbegrænsninger arbejder vi med funktion, bevægelse og relevante hverdagsfaktorer med henblik på at styrke den enkeltes muligheder for langsigtet egenhåndtering.",
+    service5Title: "Traditionel kinesisk medicin",
+    service5Text: "Med udgangspunkt i et helhedsorienteret perspektiv kan akupunktur, zoneterapi og andre relevante traditionelle behandlingsprincipper integreres i rehabiliteringen, når det er relevant, med fokus på funktion, balance og livskvalitet.",
+    service6Title: "Tai Chi og rehabiliterende bevægelse",
+    service6Text: "Tai Chis rolige og koordinerede bevægelser kan, når det er relevant, indgå i rehabiliteringen med fokus på balance, koordination, bevægelighed, kropskontrol og afspænding. Øvelserne tilpasses den enkeltes funktion og muligheder.",
     philosophyLabel: "Min tilgang",
     philosophyQuote: "“At rehabilitere er ikke kun at behandle det, der gør ondt.<br>Det er at hjælpe kroppen med igen at finde muligheder.”",
     philosophyText: "Ro · nærvær · funktion · bevægelse",
-
     aboutLabel: "Om mig",
     aboutName: "Hongling Mo Sønnichsen",
-    aboutCredentials: "MSc i Rehabiliteringsvidenskab · RAB Akupunktør · RAB Zoneterapeut",
+    aboutCredentials: "MSc i Rehabilitering · RAB Akupunktør · RAB Zoneterapeut",
     aboutTitle: "Min faglige baggrund",
     aboutP1: "Jeg arbejder i dag med klinisk rehabilitering på et tværfagligt sundhedscenter i København. Jeg har en kandidatuddannelse i rehabilitering fra Syddansk Universitet og en medicinsk uddannelsesbaggrund fra Guangxi Medical University i Kina.",
-    aboutP2: "Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi og immunologi. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt om screening og analyse af udvalgte kinesiske lægeurters indholdsstoffer og deres betydning for immunfunktionen. Det blev begyndelsen på min forsknings- og faglige tilknytning til Danmark.",
-    aboutP3: "Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering. Min kombinerede erfaring inden for grundforskning, immunologi og klinisk rehabilitering giver mig et tværfagligt perspektiv på rehabilitering – fra forståelse af biologiske mekanismer til genopbygning af funktion og hverdagsliv.",
-    aboutP4: "I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed og respekt. Jeg kombinerer evidensbaseret rehabilitering med akupunktur, zoneterapi og patientuddannelse, når det er relevant, med fokus på funktion, selvstændighed og livskvalitet.",
-    aboutP5: "Jeg ser frem til at bidrage med min faglige erfaring, internationale baggrund og engagement i organisationens fællesskab og aktiviteter.",
-    rehabText: "En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv. Min egen rehabiliteringsproces gav mig en dybere forståelse af de fysiske og psykiske udfordringer, som mange mennesker møder under rehabilitering. Erfaringen blev en vigtig inspiration for min videre uddannelse og mit arbejde inden for rehabilitering.",
-
+    aboutP2: "Tidligt i min karriere arbejdede jeg med undervisning og forskning inden for patofysiologi og immunologi i Kina. I 2000 deltog jeg som udvekslingsforsker i et dansk-kinesisk forskningsprojekt, hvor jeg arbejdede med ekstraktion og analyse af indholdsstoffer fra udvalgte kinesiske lægeurter samt deres potentielle betydning for immunfunktionen. Det blev begyndelsen på min forskningsmæssige og faglige tilknytning til Danmark.",
+    aboutP3: "Siden 2022 har jeg studeret under professor og ph.d. Ma Shouchun med særlig fordybelse i Zhang Zhongjings Shang Han Za Bing Lun og den klassiske kinesiske medicinske tænkning. Jeg er medlem af forskningsforeningen for Fuling-versionen af Shang Han Za Bing Lun og deltager i studiegruppen for Recompiled Shi-annotated Shang Han Za Bing Lun (Fuling-versionen). Studiegruppen samler forskere og fagpersoner fra forskellige dele af verden med interesse for Shang Han Lun og Jin Gui Yao Lue med henblik på fælles studie og forskning i Fuling-versionen af Shang Han Za Bing Lun. Gennem dette systematiske arbejde med klassisk teori og klinisk tænkning har jeg uddybet min forståelse af den helhedsorienterede tilgang i kinesisk medicin, mønstergenkendelse og individuelt tilpasset behandling. Jeg har publiceret flere videnskabelige artikler inden for medicin, immunologi, rehabilitering og beslægtede områder.",
+    rehabText: "En alvorlig trafikulykke i 2012 blev et vigtigt vendepunkt i mit liv. Min egen langvarige rehabiliteringsproces gav mig en dybere forståelse af de fysiske og psykiske udfordringer, der kan opstå under et rehabiliteringsforløb. Erfaringen blev samtidig en vigtig motivation for min videre uddannelse og mit arbejde inden for rehabilitering.",
+    aboutP4: "Jeg arbejder med at integrere traditionelle behandlingsmetoder og moderne rehabilitering. Min baggrund inden for medicin, grundforskning, immunologi og klinisk rehabilitering giver mig mulighed for at betragte rehabilitering fra et tværfagligt perspektiv – fra forståelsen af kroppens biologiske mekanismer til genopbygning af funktion, selvstændighed og livskvalitet.",
+    aboutP5: "I mit kliniske arbejde lægger jeg vægt på at møde den enkelte med ro, faglighed og respekt. Med udgangspunkt i den enkeltes behov og mål kombinerer jeg evidensbaseret rehabilitering med akupunktur, zoneterapi, principper fra kinesisk medicin og relevant rehabiliterende bevægelse. Fokus er på funktion, bevægelse, selvstændighed og livskvalitet samt på patientuddannelse og udvikling af den enkeltes evne til egenhåndtering.",
+    aboutP6: "Mit ønske er at bruge min faglige erfaring, tværkulturelle baggrund og forståelse af rehabilitering til at hjælpe den enkelte med at genvinde bedst mulig funktion, bevare bevægelse og selvstændighed og opnå en bedre livskvalitet.",
     contactLabel: "Kontakt",
-    contactTitle: "Du er velkommen til at kontakte mig.",
+    contactTitle: "Du er velkommen til at kontakte mig",
     contactText: "Har du spørgsmål om behandling eller rehabilitering, er du velkommen til at tage kontakt.",
     phoneLabel: "Telefon:",
     emailLabel: "E-mail:",
     contactButton: "Skriv til mig",
-
-    footer: "© 2026 ØBRO REHABILITERINGS KLINIK · København",
-    pageTitle: "ØBRO REHABILITERINGS KLINIK | Rehabilitering & Akupunktur"
+    footer: "© 2026 Øbro Rehabiliterings Klinik · København",
+    pageTitle: "Øbro Rehabiliterings Klinik | Rehabilitering & Akupunktur"
   },
 
-
   en: {
-    logo: "ØBRO REHABILITATION CLINIC",
-
+    logo: "Øbro Rehabilitation Clinic",
     navAbout: "About",
     navTreatment: "Treatment",
     navContact: "Contact",
-
-    heroSmall: "Rehabilitation · Acupuncture · Reflexology",
-    heroTitle: "The path back to better function and quality of life.",
-    heroText: "Individual rehabilitation focused on body function, movement and quality of life.",
+    heroTitle: "Better Function, More Movement and a Better Quality of Life",
+    heroText: "Based on each person’s individual needs and goals, I provide personalized rehabilitation and guidance with a focus on function, movement and quality of life.",
     heroButton: "Contact the clinic",
-
-    introLabel: "ØBRO REHABILITATION CLINIC",
+    introLabel: "Øbro Rehabilitation Clinic",
     introTitle: "A calm and individual approach to rehabilitation.",
     introP1: "Every body has its own story. That is why treatment begins with you, your needs and your everyday life.",
     introP2: "The goal is not only to reduce pain, but also to improve physical function and create greater confidence in movement.",
-
     servicesLabel: "Treatment & rehabilitation",
     servicesTitle: "How can Øbro Rehabiliterings Klinik help you?",
-
-    service1Title: "Neck and back pain",
-    service1Text: "Individual treatment and functional training focused on mobility and everyday function.",
-
-    service2Title: "Sports injuries",
-    service2Text: "Rehabilitation following strain and injury, with a focus on a safe and gradual return to activity.",
-
-    service3Title: "Postoperative rehabilitation",
-    service3Text: "Support for rebuilding function, strength and movement after surgery.",
-
-    service4Title: "Chronic pain",
-    service4Text: "A holistic approach to persistent pain and reduced physical function.",
-
-    service5Title: "Functional rehabilitation",
-    service5Text: "Training based on your current physical function and your individual goals.",
-
-    service6Title: "Acupuncture & reflexology",
-    service6Text: "Complementary treatments that may form part of an individual treatment plan.",
-
+    service1Title: "Back and neck pain",
+    service1Text: "For back, neck and shoulder pain and related limitations in movement, treatment is based on an individual assessment, rehabilitative exercise and appropriate treatment methods, with a focus on improving function in everyday life.",
+    service2Title: "Sports injuries and functional problems",
+    service2Text: "For injuries related to sports or everyday activities, as well as musculoskeletal functional problems, rehabilitation gradually focuses on movement, strength and body control to support recovery of function.",
+    service3Title: "Rehabilitation after surgery and illness",
+    service3Text: "Rehabilitation is adapted to each person’s situation and stage of recovery after surgery or illness, with a focus on gradually rebuilding function, mobility and independence in everyday life.",
+    service4Title: "Chronic pain and long-term functional problems",
+    service4Text: "For persistent pain or long-term functional limitations, rehabilitation addresses function, movement and relevant everyday factors to support sustainable self-management over time.",
+    service5Title: "Traditional Chinese Medicine",
+    service5Text: "From a holistic perspective, acupuncture, reflexology and other relevant traditional treatment principles may be integrated into rehabilitation when appropriate, with a focus on function, balance and quality of life.",
+    service6Title: "Tai Chi and rehabilitative movement",
+    service6Text: "When appropriate, the gentle and coordinated movements of Tai Chi can be incorporated into rehabilitation to support balance, coordination, mobility, body control and relaxation. Exercises are adapted to each person’s functional abilities.",
     philosophyLabel: "My approach",
     philosophyQuote: "“Rehabilitation is not only about treating what hurts.<br>It is about helping the body rediscover its possibilities.”",
     philosophyText: "Calm · presence · function · movement",
-
     aboutLabel: "About me",
     aboutName: "Hongling Mo Sønnichsen",
-    aboutCredentials: "MSc in Rehabilitation Science · RAB Acupuncturist · RAB Reflexologist",
+    aboutCredentials: "MSc in Rehabilitation · RAB Acupuncturist · RAB Reflexologist",
     aboutTitle: "My professional background",
-    aboutP1: "I currently work with clinical rehabilitation at a multidisciplinary healthcare centre in Copenhagen. I hold a Master’s degree in Rehabilitation from the University of Southern Denmark and have a medical educational background from Guangxi Medical University in China.",
-    aboutP2: "Early in my career, I worked in teaching and research within pathophysiology and immunology. In 2000, I took part as an exchange researcher in a Danish-Chinese research project screening and analysing selected compounds from Chinese medicinal herbs and their effects on immune function. This marked the beginning of my research and professional connection with Denmark.",
-    aboutP3: "I am committed to integrating traditional treatment approaches with modern rehabilitation. My combined background in basic research, immunology and clinical rehabilitation gives me a multidisciplinary perspective—from understanding biological mechanisms to rebuilding function and everyday life.",
-    aboutP4: "In my clinical work, I aim to meet each person with calm, professionalism and respect. When relevant, I combine evidence-based rehabilitation with acupuncture, reflexology and patient education, focusing on function, independence and quality of life.",
-    aboutP5: "I look forward to contributing my professional experience, international background and commitment to the organisation’s community and activities.",
-    rehabText: "A serious traffic accident in 2012 became an important turning point in my life. My own rehabilitation process gave me a deeper understanding of the physical and psychological challenges that many people face during rehabilitation. This experience became an important inspiration for my further education and my work in rehabilitation.",
-
+    aboutP1: "I currently work at a rehabilitation clinic in a multidisciplinary health centre in Copenhagen. I hold a Master’s degree in Rehabilitation from the University of Southern Denmark and have a medical education background from Guangxi Medical University in China.",
+    aboutP2: "Early in my career, I worked in teaching and research within pathophysiology and immunology in China. In 2000, I participated as an exchange researcher in a Danish-Chinese research project, working with the extraction and analysis of compounds from selected Chinese medicinal herbs and their potential effects on immune function. This marked the beginning of my long-standing academic and professional connection with Denmark.",
+    aboutP3: "Since 2022, I have studied under Professor Ma Shouchun, PhD, with a particular focus on Zhang Zhongjing’s Shang Han Za Bing Lun and the classical principles of Chinese medicine. I am a member of the research association dedicated to the Fuling version of Shang Han Za Bing Lun and participate in the study group for the Recompiled Shi-annotated Shang Han Za Bing Lun (Fuling Version). The study group brings together scholars and professionals from different parts of the world with expertise and interest in Shang Han Lun and Jin Gui Yao Lue to study and research the Fuling version of Shang Han Za Bing Lun. Through this systematic study of classical theory and clinical reasoning, I have deepened my understanding of the holistic approach of Chinese medicine, pattern differentiation and individualized treatment. I have published several scientific papers in medicine, immunology, rehabilitation and related fields.",
+    rehabText: "A serious traffic accident in 2012 became an important turning point in my life. Going through a long rehabilitation process myself gave me a deeper understanding of the physical and psychological challenges that can arise during rehabilitation. This experience also became an important motivation for my further education and professional work in rehabilitation.",
+    aboutP4: "My approach is to integrate traditional treatment methods with modern rehabilitation. My background in medicine, basic research, immunology and clinical rehabilitation allows me to view rehabilitation from an interdisciplinary perspective—from understanding the body’s biological mechanisms to rebuilding function, independence and quality of life.",
+    aboutP5: "In my clinical work, I place great importance on meeting each person with calmness, professionalism and respect. Based on the individual’s needs and goals, I combine evidence-based rehabilitation with acupuncture, reflexology, principles of Chinese medicine and appropriate rehabilitative movement. The focus is on function, movement, independence and quality of life, together with patient education and developing the individual’s ability to manage their own health and rehabilitation.",
+    aboutP6: "My aim is to use my professional experience, cross-cultural background and understanding of rehabilitation to help each person regain the best possible function, maintain movement and independence, and achieve a better quality of life.",
     contactLabel: "Contact",
-    contactTitle: "You are welcome to contact me.",
+    contactTitle: "You are welcome to contact me",
     contactText: "If you have questions about treatment or rehabilitation, you are welcome to get in touch.",
     phoneLabel: "Phone:",
     emailLabel: "Email:",
     contactButton: "Write to me",
-
-    footer: "© 2026 ØBRO REHABILITATION CLINIC · Copenhagen",
-    pageTitle: "ØBRO REHABILITATION CLINIC | Rehabilitation & Acupuncture"
+    footer: "© 2026 Øbro Rehabilitation Clinic · Copenhagen",
+    pageTitle: "Øbro Rehabilitation Clinic | Rehabilitation & Acupuncture"
   },
 
-
   zh: {
-    logo: "ØBRO 康复中心",
-
+    logo: "Øbro 康复中心",
     navAbout: "关于我",
     navTreatment: "治疗与康复",
     navContact: "联系",
-
-    heroSmall: "康复 · 针灸 · 反射疗法",
-    heroTitle: "重获更好身体功能与生活质量之路。",
-    heroText: "以身体功能、运动与生活质量为核心的个性化康复。",
+    heroTitle: "改善身体功能、促进运动、提升生活质量",
+    heroText: "根据每个人的需要和目标，以身体功能、运动与生活质量为核心，提供个性化康复治疗与指导。",
     heroButton: "联系康复中心",
-
-    introLabel: "ØBRO 康复中心",
+    introLabel: "Øbro 康复中心",
     introTitle: "安静而个性化的康复方式。",
     introP1: "每一个身体都有自己的故事。因此，治疗从您本人、您的需求以及您的日常生活出发。",
     introP2: "我们的目标不仅是减轻疼痛，更是改善身体功能，让您在运动和日常生活中更加安心。",
-
     servicesLabel: "治疗与康复",
-    servicesTitle: "Øbro 康复诊所可以为您提供哪些帮助？",
-
-    service1Title: "颈部与背部疼痛",
-    service1Text: "根据个人情况进行治疗和功能训练，重点改善活动能力和日常功能。",
-
-    service2Title: "运动损伤",
-    service2Text: "针对运动负荷和损伤进行康复，帮助您安全、循序渐进地恢复活动。",
-
-    service3Title: "术后康复",
-    service3Text: "帮助身体在手术后逐步恢复功能、力量和活动能力。",
-
-    service4Title: "慢性疼痛",
-    service4Text: "从整体角度处理长期疼痛以及身体功能下降的问题。",
-
-    service5Title: "功能性康复训练",
-    service5Text: "根据身体目前的功能状态以及您的具体目标制定训练方案。",
-
-    service6Title: "针灸与反射疗法",
-    service6Text: "作为个性化治疗方案的一部分，可结合使用的辅助治疗方式。",
-
+    servicesTitle: "Øbro 康复中心可以为您提供哪些帮助？",
+    service1Title: "腰背与颈肩疼痛",
+    service1Text: "针对腰背、颈肩疼痛以及由此造成的活动受限，通过个体评估、康复训练和适合的治疗方法，改善身体功能与日常活动能力。",
+    service2Title: "运动损伤与功能障碍",
+    service2Text: "针对运动或日常活动造成的损伤及肌肉骨骼功能问题，通过循序渐进的康复训练，帮助恢复活动能力、力量与身体控制。",
+    service3Title: "术后与疾病后的康复",
+    service3Text: "根据术后或疾病后的恢复阶段及个人情况制定康复方案，逐步改善身体功能、活动能力与独立性，帮助重新回归日常生活。",
+    service4Title: "慢性疼痛与长期功能问题",
+    service4Text: "针对持续性疼痛或长期功能受限，从身体功能、运动及相关日常生活因素进行综合评估与指导，帮助建立可持续的自我管理能力。",
+    service5Title: "中医整体调理",
+    service5Text: "结合中医整体观，根据个人身体状况与功能问题，在适合的情况下将针灸、反射疗法等传统治疗方法融入康复过程，以支持身体功能、平衡与生活质量。",
+    service6Title: "太极与康复运动指导",
+    service6Text: "根据个人身体状况，在适合的情况下将太极柔和、协调的运动方式融入康复训练，关注平衡、协调、活动能力、身体控制与身心放松，并根据个人功能与能力调整练习。",
     philosophyLabel: "我的理念",
     philosophyQuote: "“康复不仅是治疗疼痛。<br>更是帮助身体重新发现可能性的过程。”",
     philosophyText: "宁静 · 专注 · 功能 · 运动",
-
     aboutLabel: "关于我",
     aboutName: "Hongling Mo Sønnichsen",
-    aboutCredentials: "康复科学硕士 MSc · RAB 注册针灸师 · RAB 注册反射疗法治疗师",
+    aboutCredentials: "康复学硕士 MSc · RAB 注册针灸师 · RAB 注册反射疗法治疗师",
     aboutTitle: "我的专业背景",
-    aboutP1: "现任职于丹麦哥本哈根一家联合医疗中心，从事临床康复工作。兼具南丹麦大学康复医学硕士与广西医科大学医学教育背景。",
-    aboutP2: "早年从事病理生理学与免疫学教学和科研工作。2000年作为交换学者参与中丹合作项目“筛选和分析部分中草药成分对免疫功能的作用”，由此开启在丹麦的科研与专业发展经历。",
-    aboutP3: "多年来，我持续关注传统医学与现代康复理念及技术的结合。基于“基础研究—免疫学—临床康复”的复合型专业背景，我注重从疾病机制、身体功能到日常生活能力等不同层面理解康复需求。",
-    aboutP4: "在临床工作中，我重视以平静、专业和尊重的方式面对每一位来访者，并在适合的情况下将循证康复、针灸、反射疗法与患者教育相结合，重点关注功能恢复、独立性与生活质量。",
-    aboutP5: "我期待以我的专业经验、国际背景和投入，为机构的共同体建设与各项活动作出贡献。",
-    rehabText: "2012年，一次严重的交通事故成为我人生中的一个重要转折点。亲身经历康复过程，让我更加深入地理解许多人在康复过程中所面对的身体和心理挑战。这段经历也成为我继续接受康复专业教育并从事康复工作的一个重要动力。",
-
+    aboutP1: "我目前在哥本哈根一家跨学科健康中心从事临床康复工作。我拥有南丹麦大学康复学硕士学位，并具有中国广西医科大学的医学教育背景。",
+    aboutP2: "职业生涯早期，我曾从事病理生理学和免疫学的教学与科研工作。2000年，我作为交流研究人员参与中丹合作科研项目，对部分中药材的成分进行提取与分析，并研究其与免疫功能之间的关系。这段经历开启了我与丹麦在科研及专业领域的长期联系。",
+    aboutP3: "自2022年起，我师从马寿椿教授、博士，深入学习张仲景《伤寒杂病论》及其经典医学思想。目前，我是涪陵古本伤寒杂病论研究会会员，并为《重编施注伤寒杂病论（涪陵古本）》研究班学员。该研究班汇集世界各地研究《伤寒》《金匮》的专家学者，开展《伤寒杂病论》涪陵古本的研究与学习。通过对经典理论与临床思维的系统学习，我进一步深化了对中医整体观、辨证思维及个体化治疗的理解。在医学、免疫学、康复学及相关研究领域，我已发表数篇学术论文。",
+    rehabText: "2012年的一次严重交通事故成为我人生中的重要转折点。亲身经历漫长的康复过程，使我对康复过程中身体和心理所面临的挑战有了更加深刻的理解，也成为我进一步学习康复学并从事这一专业的重要动力。",
+    aboutP4: "我致力于将传统治疗方法与现代康复相结合。医学、基础研究、免疫学与临床康复等不同领域的学习与实践，使我能够从跨学科的角度理解康复——从人体的生物学机制，到身体功能的恢复，再到独立生活能力与生活质量的重建。",
+    aboutP5: "在临床工作中，我重视以平静、专业和尊重的态度对待每一个人。根据个人的需要和目标，我将循证康复与针灸、反射疗法、中医治疗思维以及适合的康复运动相结合，关注身体功能、运动能力、独立性与生活质量，并重视患者教育和自我管理能力的建立。",
+    aboutP6: "我希望以我的专业经验、跨文化背景和对康复的理解，帮助每一个人更好地恢复身体功能、保持运动与独立生活的能力，并获得更好的生活质量。",
     contactLabel: "联系",
-    contactTitle: "欢迎与我联系。",
+    contactTitle: "欢迎与我联系",
     contactText: "如果您对治疗或康复有任何问题，欢迎与我联系。",
     phoneLabel: "电话：",
     emailLabel: "邮箱：",
     contactButton: "联系我",
-
-    footer: "© 2026 ØBRO 康复中心 · 哥本哈根",
-    pageTitle: "ØBRO 康复中心 | 康复与针灸"
+    footer: "© 2026 Øbro 康复中心 · 哥本哈根",
+    pageTitle: "Øbro 康复中心 | 康复与针灸"
   }
 
 };
@@ -1223,13 +1188,13 @@ function setLanguage(lang) {
   document.getElementById("about-p3").innerHTML = t.aboutP3;
   document.getElementById("about-p4").innerHTML = t.aboutP4;
   document.getElementById("about-p5").innerHTML = t.aboutP5;
+  document.getElementById("about-p6").innerHTML = t.aboutP6;
 
   document.getElementById("rehab-text").innerHTML = t.rehabText;
 
   document.getElementById("contact-label").innerHTML = t.contactLabel;
   document.getElementById("contact-title").innerHTML = t.contactTitle;
-  document.getElementById("contact-text").innerHTML = t.contactText;
-  document.getElementById("phone-label").innerHTML = t.phoneLabel;
+document.getElementById("phone-label").innerHTML = t.phoneLabel;
   document.getElementById("email-label").innerHTML = t.emailLabel;
   document.getElementById("contact-button").innerHTML = t.contactButton;
 
@@ -1238,6 +1203,20 @@ function setLanguage(lang) {
   document.querySelectorAll(".language-button").forEach(button => {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
+
+
+  const activeHash = window.location.hash;
+  if (["#om", "#behandling", "#kontakt"].includes(activeHash)) {
+    requestAnimationFrame(() => {
+      const target = document.querySelector(activeHash);
+      const header = document.querySelector("header");
+      if (target && header) {
+        const y = target.getBoundingClientRect().top + window.pageYOffset
+                  - header.getBoundingClientRect().height - 10;
+        window.scrollTo({ top: Math.max(0, y), behavior: "auto" });
+      }
+    });
+  }
 
   localStorage.setItem("siteLanguage", lang);
 }
