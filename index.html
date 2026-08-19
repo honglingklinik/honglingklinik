@@ -1103,6 +1103,318 @@ html[lang="zh"] .hero-text {
   font-weight: 600;
 }
 
+
+/* =========================================================
+   2026-08-19 — VISUAL REBALANCE
+   Less framing, more breathing room, warm beige + sage + gold
+   ========================================================= */
+
+:root {
+  --forest: #24563b;
+  --forest-deep: #1f5235;
+  --sage-soft: #e9efe5;
+  --sage-card: #f3f6ef;
+  --warm-cream: #fbf8f0;
+  --warm-beige: #f3ecdf;
+  --gold-soft: #c6a15f;
+  --line-soft: #aebca9;
+}
+
+/* Overall section rhythm */
+body { background: var(--warm-cream) !important; }
+.section { background: var(--warm-cream); }
+.intro { border-top: 0 !important; }
+.services { background: var(--sage-soft) !important; }
+.about { background: #f1f4ec !important; }
+.contact { background: #fbf5e9 !important; }
+
+/* HOME: exactly one main frame, no extra box-on-box effect */
+.home-hero-frame {
+  border: 1.5px solid var(--forest) !important;
+  outline: none !important;
+  background: rgba(255,253,247,.60) !important;
+  box-shadow: 0 8px 24px rgba(39,76,53,.045);
+}
+.home-hero-frame::before,
+.home-hero-frame::after {
+  border-color: var(--gold-soft) !important;
+}
+.home-divider span,
+.home-divider i {
+  background: var(--gold-soft) !important;
+}
+
+/* TREATMENT: six light individual cards, absolutely no enclosing grid frame */
+.service-grid {
+  border: 0 !important;
+  gap: 18px 22px !important;
+}
+.service,
+.service:nth-child(odd),
+.service:nth-child(even) {
+  border: 1px solid rgba(70,104,78,.42) !important;
+  border-radius: 10px !important;
+  padding: 28px 30px !important;
+  background: rgba(255,255,255,.62) !important;
+  box-shadow: 0 5px 14px rgba(45,70,53,.035) !important;
+}
+.service:nth-child(odd) { border-right: 1px solid rgba(70,104,78,.42) !important; }
+.service h3 { color: #2d5940; }
+.service p { color: #607066; }
+
+/* PHILOSOPHY: no outer section frame; three elegant cards only */
+.philosophy {
+  max-width: 1180px !important;
+  text-align: center;
+}
+.philosophy.philosophy-frame {
+  border: 0 !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+.philosophy.philosophy-frame::before,
+.philosophy.philosophy-frame::after {
+  display: none !important;
+}
+.philosophy-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.philosophy-card {
+  position: relative;
+  min-height: 330px;
+  padding: 46px 28px 38px;
+  border: 1.5px solid rgba(43,91,61,.78);
+  background: linear-gradient(180deg, rgba(255,253,247,.95), rgba(248,245,235,.88));
+  box-shadow: 0 7px 18px rgba(52,74,57,.045);
+}
+.philosophy-card::before {
+  content: "❦";
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 13px;
+  background: var(--warm-cream);
+  color: #8d956e;
+  font-size: 25px;
+}
+.philosophy-card h3 {
+  margin: 0 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #28563d;
+}
+.philosophy-card .mini-rule {
+  width: 145px;
+  height: 1px;
+  margin: 0 auto 25px;
+  background: linear-gradient(to right, transparent, var(--gold-soft), transparent);
+  position: relative;
+}
+.philosophy-card .mini-rule::after {
+  content: "";
+  position: absolute;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+.philosophy-card .quote {
+  min-height: 135px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #364b3e;
+}
+.philosophy-card .keywords {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(198,161,95,.40);
+  font-size: 16px;
+  color: #455a4d;
+}
+.philosophy-card .keywords strong {
+  color: #2d6545;
+  font-weight: 700;
+}
+
+/* CONTACT: one friendly card, curved and lightly decorated */
+.contact-info {
+  position: relative;
+  max-width: 590px !important;
+  margin: 36px auto 26px !important;
+  padding: 40px 46px !important;
+  border: 1.5px solid rgba(67,105,75,.58) !important;
+  outline: none !important;
+  border-radius: 34px 12px 34px 12px !important;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(198,161,95,.10), transparent 25%),
+    radial-gradient(circle at 92% 88%, rgba(126,151,115,.11), transparent 28%),
+    rgba(255,252,244,.90) !important;
+  box-shadow: 0 10px 26px rgba(65,83,67,.055) !important;
+}
+.contact-info::before {
+  content: "❦" !important;
+  top: -18px !important;
+  color: #a58c5e !important;
+  background: #fbf5e9 !important;
+  font-size: 25px !important;
+}
+#contact-button {
+  border-radius: 999px !important;
+  box-shadow: none !important;
+}
+
+/* Keep the highlighted philosophy words typographically consistent:
+   same family/size, only a restrained weight/color emphasis. */
+@media (max-width: 900px) {
+  .philosophy-cards { grid-template-columns: 1fr; }
+  .philosophy-card { min-height: 0; }
+}
+
+
+/* ===== PHILOSOPHY KEYWORDS: FULL TYPOGRAPHIC CONSISTENCY ===== */
+
+/* ===== SELECTED PHILOSOPHY POLYGON — elegant top-notched frame ===== */
+.philosophy-card {
+  position: relative !important;
+  min-height: 330px;
+  padding: 50px 30px 40px !important;
+
+  /* outer polygon silhouette */
+  border: 0 !important;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    5% 0,
+    43% 0,
+    47% 5%,
+    53% 5%,
+    57% 0,
+    95% 0,
+    100% 7%,
+    100% 93%,
+    95% 100%,
+    5% 100%,
+    0 93%,
+    0 7%
+  ) !important;
+
+  background:
+    linear-gradient(180deg, rgba(255,253,247,.97), rgba(248,245,235,.91))
+    !important;
+  box-shadow: inset 0 0 0 1.5px rgba(64,98,72,.72),
+              inset 0 0 0 7px rgba(64,98,72,.20),
+              0 7px 18px rgba(52,74,57,.045) !important;
+}
+
+/* Remove the previous top flower that competed with the polygon notch */
+.philosophy-card::before {
+  display: none !important;
+}
+
+/* small restrained gold ornament at the notch */
+.philosophy-card::after {
+  content: "❦";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b8924f;
+  font-size: 19px;
+  line-height: 1;
+}
+
+/* All three language cards use the same frame and typography */
+.philosophy-card h3 {
+  color: #28563d !important;
+}
+.philosophy-card .keywords,
+.philosophy-card .keywords * {
+  color: #455a4d !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+
+/* ===== HOME HERO TYPOGRAPHY — SAME FAMILY IN ALL LANGUAGES ===== */
+.home-hero-frame .hero-text,
+.home-hero-frame #hero-text,
+.hero .hero-text,
+#hero-text {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+
+/* ===== FINAL HOME FRAME + WATERMARK + SUBTITLE ===== */
+
+/* Homepage: distinct from philosophy cards — softly dimensional, gently curved */
+.home-hero-frame {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(48,88,62,.72) !important;
+  border-radius: 24px 8px 24px 8px !important;
+  outline: 1px solid rgba(198,161,95,.42) !important;
+  outline-offset: -8px !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.70), rgba(246,241,229,.58)) !important;
+  box-shadow:
+    0 12px 24px rgba(43,66,50,.12),
+    inset 2px 2px 5px rgba(255,255,255,.85),
+    inset -2px -2px 5px rgba(91,104,84,.10) !important;
+}
+
+/* Visible but quiet botanical watermark */
+.home-hero-frame::after {
+  content: "❧";
+  display: block !important;
+  position: absolute !important;
+  right: 34px !important;
+  bottom: 20px !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  color: rgba(111,137,101,.18) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 150px !important;
+  line-height: .75 !important;
+  transform: rotate(-18deg) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+.home-hero-frame > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Explanatory text: same family as title, but regular weight */
+.home-hero-frame .hero-text,
+.home-hero-frame #hero-text,
+.hero .hero-text,
+#hero-text {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 400 !important;
+}
+
+/* Philosophy cards remain the selected polygon style — not the homepage frame */
+.philosophy-card {
+  border-radius: 0 !important;
+}
+
+/* Make any existing decorative background marks slightly more visible */
+.watermark,
+.botanical-watermark,
+.bg-floral,
+.bg-leaf,
+.decorative-leaf {
+  opacity: .16 !important;
+}
+
 </style>
 </head>
 
@@ -1234,14 +1546,46 @@ html[lang="zh"] .hero-text {
 
   <section class="section">
 
-    <div class="philosophy philosophy-frame">
+    <div class="philosophy">
+      <div class="philosophy-cards">
 
-      <div class="section-label" id="philosophy-label"></div>
+        <article class="philosophy-card">
+          <h3>Min tilgang</h3>
+          <div class="mini-rule" aria-hidden="true"></div>
+          <div class="quote">
+            Rehabilitering handler ikke kun om at behandle smerter,<br>
+            men om at hjælpe kroppen med at genfinde sine muligheder
+          </div>
+          <div class="keywords">
+            Min tilgang: rolig · fokus · bevægelse · funktion
+          </div>
+        </article>
 
-      <blockquote id="philosophy-quote">Rehabilitering handler ikke kun om at behandle smerter,<br>men om at hjælpe kroppen med at genfinde sine muligheder</blockquote>
+        <article class="philosophy-card">
+          <h3>My philosophy</h3>
+          <div class="mini-rule" aria-hidden="true"></div>
+          <div class="quote">
+            Rehabilitation is not only about treating pain,<br>
+            but about helping the body rediscover its possibilities
+          </div>
+          <div class="keywords">
+            My philosophy: relax · focus · movement · function
+          </div>
+        </article>
 
-      <p id="philosophy-text">Min tilgang: <strong>rolig</strong> · fokus · bevægelse · funktion</p>
+        <article class="philosophy-card">
+          <h3>我的理念</h3>
+          <div class="mini-rule" aria-hidden="true"></div>
+          <div class="quote">
+            康复不仅是治疗疼痛，<br>
+            更是帮助身体重新发现可能性的过程
+          </div>
+          <div class="keywords">
+            我的理念：轻松 · 专注 · 运动 · 功能
+          </div>
+        </article>
 
+      </div>
     </div>
 
   </section>
@@ -1354,7 +1698,7 @@ const translations = {
     service6Text: "Tai Chis rolige og koordinerede bevægelser kan, når det er relevant, indgå i rehabiliteringen med fokus på balance, koordination, bevægelighed, kropskontrol og afspænding. Øvelserne tilpasses den enkeltes funktion og muligheder.",
     philosophyLabel: "",
     philosophyQuote: "Rehabilitering handler ikke kun om at behandle smerter,<br>men om at hjælpe kroppen med at genfinde sine muligheder",
-    philosophyText: "Min tilgang: <strong>rolig</strong> · fokus · bevægelse · funktion",
+    philosophyText: "Min tilgang: rolig · fokus · bevægelse · funktion",
     aboutLabel: "Om mig",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "MSc i Rehabilitering · RAB Akupunktør · RAB Zoneterapeut",
@@ -1404,7 +1748,7 @@ const translations = {
     service6Text: "When appropriate, the gentle and coordinated movements of Tai Chi can be incorporated into rehabilitation to support balance, coordination, mobility, body control and relaxation. Exercises are adapted to each person’s functional abilities.",
     philosophyLabel: "",
     philosophyQuote: "Rehabilitation is not only about treating pain,<br>but about helping the body rediscover its possibilities",
-    philosophyText: "My philosophy: <strong>relax</strong> · focus · movement · function",
+    philosophyText: "My philosophy: relax · focus · movement · function",
     aboutLabel: "About me",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "MSc in Rehabilitation · RAB Acupuncturist · RAB Reflexologist",
@@ -1454,7 +1798,7 @@ const translations = {
     service6Text: "根据个人身体状况，在适合的情况下将太极柔和、协调的运动方式融入康复训练，关注平衡、协调、活动能力、身体控制与身心放松，并根据个人功能与能力调整练习。",
     philosophyLabel: "",
     philosophyQuote: "康复不仅是治疗疼痛，<br>更是帮助身体重新发现可能性的过程",
-    philosophyText: "我的理念：<strong>轻松</strong> · 专注 · 运动 · 功能",
+    philosophyText: "我的理念：轻松 · 专注 · 运动 · 功能",
     aboutLabel: "关于我",
     aboutName: "Hongling Mo Sønnichsen",
     aboutCredentials: "康复学硕士 MSc · RAB 注册针灸师 · RAB 注册反射疗法治疗师",
@@ -1507,9 +1851,9 @@ function setLanguage(lang) {
     document.getElementById(`service${i}-text`).innerHTML = t[`service${i}Text`];
   }
 
-  document.getElementById("philosophy-label").innerHTML = t.philosophyLabel;
-  document.getElementById("philosophy-quote").innerHTML = t.philosophyQuote;
-  document.getElementById("philosophy-text").innerHTML = t.philosophyText;
+
+
+
 
   document.getElementById("about-label").innerHTML = t.aboutLabel;
   document.getElementById("about-name").innerHTML = t.aboutName;
@@ -1658,7 +2002,7 @@ setLanguage(savedLanguage);
 
     // Restore approved philosophy frame, but do not alter its wording.
     var philosophy = document.querySelector('.philosophy, .motto, .philosophy-content, .motto-content');
-    if (philosophy) philosophy.classList.add('philosophy-frame');
+    /* philosophy now uses three standalone cards; no outer frame */
   }
 
   document.addEventListener('DOMContentLoaded', polishFinalLayout);
