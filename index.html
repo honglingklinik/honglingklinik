@@ -819,6 +819,113 @@
       }
     }
 
+
+    /* ===== FINAL TRILINGUAL HOMEPAGE FRAME ===== */
+    .hero {
+      min-height: 560px !important;
+      padding: 64px 30px 70px !important;
+    }
+
+    .hero-content {
+      max-width: 1120px !important;
+      width: 100%;
+    }
+
+    .home-hero-frame {
+      position: relative;
+      border: 2px solid #315b45;
+      outline: 1px solid rgba(49,91,69,.55);
+      outline-offset: -9px;
+      padding: 62px 64px 54px;
+      background: rgba(255,255,255,.18);
+    }
+
+    .home-hero-frame::before,
+    .home-hero-frame::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 13px;
+      border-top: 2px solid #b69a62;
+    }
+
+    .home-hero-frame::before {
+      left: 13px;
+      border-left: 2px solid #b69a62;
+    }
+
+    .home-hero-frame::after {
+      right: 13px;
+      border-right: 2px solid #b69a62;
+    }
+
+    #hero-title {
+      margin-bottom: 18px !important;
+    }
+
+    html[lang="da"] #hero-title,
+    html[lang="zh"] #hero-title {
+      font-size: clamp(38px, 4.5vw, 56px) !important;
+    }
+
+    /* English remains at the already-approved size. */
+    html[lang="en"] #hero-title {
+      font-size: clamp(40px, 4.4vw, 56px) !important;
+      line-height: 1.10 !important;
+      max-width: 1040px !important;
+    }
+
+    .home-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: min(360px, 58%);
+      margin: 0 auto 20px;
+    }
+
+    .home-divider span {
+      height: 1px;
+      flex: 1;
+      background: #c7a56b;
+    }
+
+    .home-divider i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c7a56b;
+      display: block;
+    }
+
+    .hero-text {
+      font-weight: 700 !important;
+      max-width: 820px !important;
+      margin-bottom: 0 !important;
+    }
+
+    .home-contact-button {
+      display: inline-block;
+      margin-top: 28px !important;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 42px 18px 55px !important;
+      }
+
+      .home-hero-frame {
+        padding: 44px 24px 38px;
+      }
+
+      html[lang="da"] #hero-title,
+      html[lang="zh"] #hero-title,
+      html[lang="en"] #hero-title {
+        font-size: clamp(32px, 7.5vw, 44px) !important;
+      }
+    }
+
 </style>
 </head>
 
@@ -850,14 +957,15 @@
 
   <section class="hero">
     <div class="hero-content">
-<h1 id="hero-title">Bedre Funktion、Mere Bevægelse og Bedre Livskvalitet</h1>
+      <div class="home-hero-frame">
+        <h1 id="hero-title">Bedre Funktion, Mere Bevægelse og Bedre Livskvalitet</h1>
+        <div class="home-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="hero-text" id="hero-text">Med udgangspunkt i den enkeltes behov og mål tilbyder jeg individuel rehabilitering og vejledning med fokus på funktion, bevægelse og livskvalitet.</p>
+      </div>
 
-      <p class="hero-text" id="hero-text">Med udgangspunkt i den enkeltes behov og mål tilbyder jeg individuel rehabilitering og vejledning med fokus på funktion, bevægelse og livskvalitet.</p>
-
-      <a class="button" href="#kontakt" id="hero-button">
+      <a class="button home-contact-button" href="#kontakt" id="hero-button">
         Kontakt klinikken
       </a>
-
     </div>
   </section>
 
@@ -1055,7 +1163,7 @@ const translations = {
     navAbout: "Om mig",
     navTreatment: "Behandling",
     navContact: "Kontakt",
-    heroTitle: "Bedre Funktion、Mere Bevægelse og Bedre Livskvalitet",
+    heroTitle: "Bedre Funktion, Mere Bevægelse og Bedre Livskvalitet",
     heroText: "Med udgangspunkt i den enkeltes behov og mål tilbyder jeg individuel rehabilitering og vejledning med fokus på funktion, bevægelse og livskvalitet.",
     heroButton: "Kontakt klinikken",
     introLabel: "Øbro Rehabiliterings Klinik",
@@ -1105,8 +1213,8 @@ const translations = {
     navAbout: "About",
     navTreatment: "Treatment",
     navContact: "Contact",
-    heroTitle: "Better Function, More Movement and a Better Quality of Life",
-    heroText: "Based on each person’s individual needs and goals, I provide personalized rehabilitation and guidance with a focus on function, movement and quality of life.",
+    heroTitle: "Better Function, More Movement and Better Life Quality",
+    heroText: "Based on your individual needs and goals, I offer personalized rehabilitation and guidance with a focus on function, movement and better life quality.",
     heroButton: "Contact the clinic",
     introLabel: "Øbro Rehabilitation Clinic",
     introTitle: "A calm and individual approach to rehabilitation.",
@@ -1155,8 +1263,8 @@ const translations = {
     navAbout: "关于我",
     navTreatment: "治疗与康复",
     navContact: "联系",
-    heroTitle: "改善身体功能、促进运动、提升生活质量",
-    heroText: "根据每个人的需要和目标，以身体功能、运动与生活质量为核心，提供个性化康复治疗与指导。",
+    heroTitle: "更佳的功能、更多的运动<br>和更高的生活质量",
+    heroText: "以您的个人需求和目标为出发点，提供个性化的康复治疗与指导，专注于功能、运动和生活质量。",
     heroButton: "联系康复中心",
     introLabel: "Øbro 康复中心",
     introTitle: "安静而个性化的康复方式。",
