@@ -1604,6 +1604,154 @@ p,
   }
 }
 
+
+/* ============================================================
+   TRUE FINAL RESPONSIVE WRAPPING — based on actual live screenshots
+   NO TEXT CONTENT CHANGES
+   ============================================================ */
+
+/* philosophy grid: keep three balanced cards on desktop */
+@media (min-width: 901px) {
+  .philosophy-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+  }
+  .philosophy-card {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  .philosophy-card .quote {
+    max-width: 100% !important;
+    min-height: 150px !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+    text-wrap: balance !important;
+  }
+  .philosophy-card .keywords {
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.15px !important;
+  }
+}
+
+/* tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  .philosophy-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .philosophy-card {
+    max-width: 680px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+  }
+  .philosophy-card .quote {
+    max-width: 620px !important;
+    min-height: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-wrap: balance !important;
+  }
+  .philosophy-card .keywords {
+    white-space: nowrap !important;
+    font-size: 15px !important;
+  }
+}
+
+/* phones */
+@media (max-width: 600px) {
+  .philosophy-cards {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .philosophy-card {
+    width: calc(100% - 20px) !important;
+    max-width: 430px !important;
+    margin: 0 auto !important;
+    padding: 38px 16px 30px !important;
+    min-height: 0 !important;
+  }
+  .philosophy-card .quote {
+    max-width: 96% !important;
+    min-height: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 16px !important;
+    line-height: 1.58 !important;
+    text-wrap: balance !important;
+  }
+  .philosophy-card .keywords {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: clamp(11.5px, 3.35vw, 14px) !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  /* Chinese home title: two balanced lines, no orphan character */
+  html[lang="zh"] .home-hero-frame #hero-title,
+  html[lang="zh"] #hero-title {
+    font-size: clamp(26px, 7.1vw, 31px) !important;
+    line-height: 1.34 !important;
+    max-width: 100% !important;
+    text-wrap: balance !important;
+    letter-spacing: -0.25px !important;
+  }
+
+  /* Chinese explanation: use more width and slightly smaller type */
+  html[lang="zh"] .home-hero-frame #hero-text,
+  html[lang="zh"] #hero-text {
+    font-size: clamp(16px, 4.4vw, 19px) !important;
+    line-height: 1.72 !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-wrap: pretty !important;
+    letter-spacing: 0 !important;
+  }
+
+  /* Other languages: balanced without leaving isolated words */
+  html[lang="da"] .home-hero-frame #hero-title,
+  html[lang="en"] .home-hero-frame #hero-title {
+    font-size: clamp(29px, 7.4vw, 36px) !important;
+    line-height: 1.18 !important;
+    max-width: 100% !important;
+    text-wrap: balance !important;
+  }
+  html[lang="da"] .home-hero-frame #hero-text,
+  html[lang="en"] .home-hero-frame #hero-text {
+    font-size: clamp(16px, 4.2vw, 19px) !important;
+    line-height: 1.62 !important;
+    max-width: 100% !important;
+    text-wrap: pretty !important;
+  }
+
+  /* all card/section copy gets full usable width */
+  .service p,
+  .about-text p,
+  .contact p {
+    max-width: 100% !important;
+    text-wrap: pretty !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .philosophy-card .keywords {
+    font-size: 11px !important;
+    letter-spacing: -0.3px !important;
+  }
+  html[lang="zh"] .home-hero-frame #hero-title,
+  html[lang="zh"] #hero-title {
+    font-size: 25px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -1742,8 +1890,7 @@ p,
           <h3>Min tilgang</h3>
           <div class="mini-rule" aria-hidden="true"></div>
           <div class="quote">
-            Rehabilitering handler ikke kun om at behandle smerter,<br>
-            men om at hjælpe kroppen med at genfinde sine muligheder
+            Rehabilitering handler ikke kun om at behandle smerter, men om at hjælpe kroppen med at genfinde sine muligheder
           </div>
           <div class="keywords">
             Min tilgang: rolig · fokus · bevægelse · funktion
@@ -1754,8 +1901,7 @@ p,
           <h3>My philosophy</h3>
           <div class="mini-rule" aria-hidden="true"></div>
           <div class="quote">
-            Rehabilitation is not only about treating pain,<br>
-            but about helping the body rediscover its possibilities
+            Rehabilitation is not only about treating pain, but about helping the body rediscover its possibilities
           </div>
           <div class="keywords">
             My philosophy: relax · focus · movement · function
@@ -1766,8 +1912,7 @@ p,
           <h3>我的理念</h3>
           <div class="mini-rule" aria-hidden="true"></div>
           <div class="quote">
-            康复不仅是治疗疼痛，<br>
-            更是帮助身体重新发现可能性的过程
+            康复不仅是治疗疼痛，更是帮助身体重新发现可能性的过程
           </div>
           <div class="keywords">
             我的理念：轻松 · 专注 · 运动 · 功能
@@ -1964,7 +2109,7 @@ const translations = {
     navAbout: "关于我",
     navTreatment: "治疗与康复",
     navContact: "联系",
-    heroTitle: "更佳的功能、更多的运动<br>和更高的生活质量",
+    heroTitle: "更佳的功能、更多的运动和更高的生活质量",
     heroText: "以您的个人需求和目标为出发点，提供个性化的康复治疗与指导，专注于功能、运动和生活质量。",
     heroButton: "联系康复中心",
     introLabel: "Øbro 康复中心",
