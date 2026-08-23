@@ -2364,5 +2364,36 @@ setLanguage(savedLanguage);
 })();
 </script>
 
+
+<script>
+(function () {
+  var heroButton = document.getElementById("hero-button");
+  if (!heroButton) return;
+
+  heroButton.addEventListener("click", function (event) {
+    /* Mobile already works correctly — leave it untouched. */
+    if (window.innerWidth <= 600) return;
+
+    event.preventDefault();
+
+    var target = document.getElementById("kontakt");
+    var header = document.querySelector("header");
+    if (!target || !header) return;
+
+    history.replaceState(null, "", "#kontakt");
+
+    var headerHeight = header.getBoundingClientRect().height;
+    var gap = 10;
+    var y = target.getBoundingClientRect().top + window.pageYOffset
+            - headerHeight - gap;
+
+    window.scrollTo({
+      top: Math.max(0, y),
+      behavior: "smooth"
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
